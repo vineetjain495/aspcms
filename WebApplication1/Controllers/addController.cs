@@ -58,6 +58,8 @@ namespace WebApplication1.Controllers
 
                 ctx.SaveChanges();
 
+                if (emp.RoleCode == 4 || emp.RoleCode == 6)
+                { 
                 /*atmmaster amm = objEntity.atmmasters.Where(e => e.HubLocationCode);*/
                 var result = objEntity.atmmasters.Select(m => new
                     {
@@ -69,22 +71,23 @@ namespace WebApplication1.Controllers
                         m.HubLocationName
                     }).Distinct().Where(i => emp.Hub.Contains(i.HubLocationCode)).ToList();
 
-                foreach (var value in result)
-                {
-                    Console.WriteLine(value);
-                    ctx.employee_hierarchy.Add(new employee_hierarchy()
+                    foreach (var value in result)
                     {
-                        EmployeeCode = emp.Type_EmpCode,
-                        Region_Code = value.RoCode,
-                        Loc_Code = value.LocationCode,
-                        Hub_Location_Code = value.HubLocationCode,
-                        CreatedDate = now,
-                        FromDate = now,
-                        IsActive = 1
-                       
+                        Console.WriteLine(value);
+                        ctx.employee_hierarchy.Add(new employee_hierarchy()
+                        {
+                            EmployeeCode = emp.Type_EmpCode,
+                            Region_Code = value.RoCode,
+                            Loc_Code = value.LocationCode,
+                            Hub_Location_Code = value.HubLocationCode,
+                            CreatedDate = now,
+                            FromDate = now,
+                            IsActive = 1
 
-                    });
-                    ctx.SaveChanges();
+
+                        });
+                        ctx.SaveChanges();
+                    }
 
                 }
 
