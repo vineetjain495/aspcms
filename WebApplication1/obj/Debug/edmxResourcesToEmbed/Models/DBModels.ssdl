@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSAutomation_UATModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type_EmpCode" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="RoleCode" Type="int" />
+    <Property Name="RightsCode" Type="int" />
+  </EntityType>
+  <EntityContainer Name="RMSAutomation_UATModel1StoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee].[ID] AS [ID], 
+    [Employee].[Type_EmpCode] AS [Type_EmpCode], 
+    [Employee].[EmployeeName] AS [EmployeeName], 
+    [Employee].[MobileNumber] AS [MobileNumber], 
+    [Employee].[Password] AS [Password], 
+    [Employee].[EmailId] AS [EmailId], 
+    [Employee].[RoleCode] AS [RoleCode], 
+    [Employee].[RightsCode] AS [RightsCode]
+    FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

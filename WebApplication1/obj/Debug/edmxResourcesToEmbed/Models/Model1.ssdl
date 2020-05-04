@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSAutomation_UATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="employee_role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="150" />
+    <Property Name="TypeCode" Type="int" />
+    <Property Name="Type_EmpCode" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="RoleCode" Type="int" />
+    <Property Name="RightsCode" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="EncryptOtp" Type="varchar" MaxLength="10" />
+    <Property Name="PassChangeFlag" Type="bit" />
+    <Property Name="UserNotAllocation" Type="bit" />
+    <Property Name="MspCategory" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="RMSAutomation_UATModelStoreContainer">
+    <EntitySet Name="employee_role" EntityType="Self.employee_role" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

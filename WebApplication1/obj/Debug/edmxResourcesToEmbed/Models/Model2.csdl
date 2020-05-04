@@ -1,0 +1,1153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSAutomation_UATModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="apilog">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestContentType" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="RequestContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RequestUri" Type="String" MaxLength="4500" FixedLength="false" Unicode="false" />
+    <Property Name="RequestMethod" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RequestTimestamp" Type="DateTime" Precision="3" />
+    <Property Name="ResponseContentType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseStatusCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseTimestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="atmmaster">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="atmid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="atmcode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RoCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOverDate" Type="DateTime" Precision="3" />
+    <Property Name="HandOverDate" Type="DateTime" Precision="3" />
+    <Property Name="Company" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AtmType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RouteCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RouteName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CBRID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="batch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="FromEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EmailSubject" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EmailContentType" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EmailBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="To" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="cc" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="EmailIdentifier" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DownloadPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="message_id" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PartialResponseSent" Type="Boolean" />
+    <Property Name="FinalResponseSent" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="batchresponse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CompleteBatchResponse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseFilePath" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="CassetteMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bank" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <Property Name="Type1" Type="Int32" />
+    <Property Name="Type2" Type="Int32" />
+    <Property Name="Type3" Type="Int32" />
+    <Property Name="Type4" Type="Int32" />
+    <Property Name="Type5" Type="Int32" />
+    <Property Name="MixType1" Type="Int32" />
+    <Property Name="MixType2" Type="Int32" />
+    <Property Name="MixType3" Type="Int32" />
+    <Property Name="MixType4" Type="Int32" />
+    <Property Name="MixType5" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EmailData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ItemType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsProcessed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_EmpCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleCode" Type="Int32" />
+    <Property Name="RightsCode" Type="Int32" />
+  </EntityType>
+  <EntityType Name="employee_hierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeCode" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Region_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Loc_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Sub_Location_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Hub_Location_Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Byte" />
+    <Property Name="Zone" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="employee_role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TypeCode" Type="Int32" />
+    <Property Name="Type_EmpCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleCode" Type="Int32" />
+    <Property Name="RightsCode" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="FromDate" Type="DateTime" Precision="3" />
+    <Property Name="ToDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="EncryptOtp" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PassChangeFlag" Type="Boolean" />
+    <Property Name="UserNotAllocation" Type="Boolean" />
+    <Property Name="MspCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="errorcodemaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorBucket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Machine_Make" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Module_code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Module_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TD_status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TD_status_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="M_status_error" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="M_status_error_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NextTrans_Flag" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="errorcodemasterdistinct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="errorcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorBucket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="errorrolemapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="ErrorID" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Byte" />
+  </EntityType>
+  <EntityType Name="master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ParentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Byte" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="mspconfiguration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DomainName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MSPName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ATMID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImageLogo" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="NoExcessCertificateReq" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="oldrmsticket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="accountname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="atmid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cardno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DispDate" Type="DateTime" Precision="3" />
+    <Property Name="DisputeAmt" Type="Double" />
+    <Property Name="RecoveredAmt" Type="Double" />
+    <Property Name="RefNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmt" Type="Double" />
+    <Property Name="TranDate" Type="DateTime" Precision="3" />
+    <Property Name="TranNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cmsstatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="custstatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="errorcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="feasibleid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="territorystatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pendingamount" Type="Double" />
+    <Property Name="querycategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="atmtype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="typecode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="physical_shortage_temp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CBRID" Type="Int64" />
+    <Property Name="ATMID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EODDATETIME" Type="DateTime" Precision="3" />
+    <Property Name="EODDATE" Type="DateTime" Precision="3" />
+    <Property Name="TRANTIME" Type="DateTime" Precision="3" />
+    <Property Name="Overage_Total" Type="Double" />
+    <Property Name="Shortage_Total" Type="Double" />
+    <Property Name="Overage_2000" Type="Double" />
+    <Property Name="Overage_500" Type="Double" />
+    <Property Name="Overage_200" Type="Double" />
+    <Property Name="Overage_100" Type="Double" />
+    <Property Name="Overage_50" Type="Double" />
+    <Property Name="Shortage_2000" Type="Double" />
+    <Property Name="Shortage_500" Type="Double" />
+    <Property Name="Shortage_200" Type="Double" />
+    <Property Name="Shortage_10" Type="Double" />
+    <Property Name="Shortage_50" Type="Double" />
+  </EntityType>
+  <EntityType Name="recovery">
+    <Key>
+      <PropertyRef Name="RecoveryId" />
+    </Key>
+    <Property Name="RecoveryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecoveryNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BatchId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TicketId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RefTicketId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RecoveryFromEmpId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Status2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RecoveryAmount" Type="Double" />
+    <Property Name="ReceivedAmount" Type="Double" />
+    <Property Name="Comments" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="RecoveryAssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="LocationSubmitted" Type="Boolean" />
+    <Property Name="MisSubmitted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="recoverycollection">
+    <Key>
+      <PropertyRef Name="CollectionId" />
+    </Key>
+    <Property Name="CollectionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CollectionNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RecoveryNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RecoveryAmount" Type="Double" />
+    <Property Name="TransDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceivedAmount" Type="Double" />
+    <Property Name="TransactionMode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionNumber" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TransDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Status2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="OwnerOfCollection" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreationComments" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="ApproverComments" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="runruleenginelog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RanRuleEngineWeb" Type="Boolean" />
+    <Property Name="RanRuleEngineWebDate" Type="DateTime" Precision="3" />
+    <Property Name="RuleEngineRemarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RuleEngineInitiator" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="StatusChangeManual">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SrNo" Type="Int32" />
+    <Property Name="Justification" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OldStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NewStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OldCMSStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NewCMSStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryCategory" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDate" Type="DateTime" Precision="3" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputedAmount" Type="Double" />
+    <Property Name="TransactonTime" Type="DateTime" Precision="3" />
+    <Property Name="TransactionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransAmount" Type="Double" />
+    <Property Name="CardNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="EJFilePath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepositDate" Type="DateTime" Precision="3" />
+    <Property Name="DepositAmount" Type="Double" />
+    <Property Name="InternalAction" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HOComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CMSStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OldTicketId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmount" Type="Double" />
+    <Property Name="RecoveredAmount" Type="Double" />
+    <Property Name="TicketAttRefId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsAtmExist" Type="Boolean" Nullable="false" />
+    <Property Name="ShortageFromDate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HoOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessingRemarks" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ATMpkid" Type="Int32" />
+    <Property Name="HOInitialAssignedDT" Type="DateTime" Precision="3" />
+    <Property Name="HOSubmitted" Type="Boolean" />
+    <Property Name="AssignedToLocationDT" Type="DateTime" Precision="3" />
+    <Property Name="LocSubmitted" Type="Boolean" />
+    <Property Name="LocationCompletionDT" Type="DateTime" Precision="3" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastEOD" Type="DateTime" Precision="3" />
+    <Property Name="FirstEOD" Type="DateTime" Precision="3" />
+    <Property Name="WOORDERNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RunRuleEngine" Type="Boolean" />
+    <Property Name="JVHAmount" Type="Double" />
+    <Property Name="TerritoryJustification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ticket_CounterData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ATMID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EODDate" Type="DateTime" Precision="3" />
+    <Property Name="QueryType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CountertType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SubType" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Deno50" Type="Int64" />
+    <Property Name="Deno100" Type="Int64" />
+    <Property Name="Deno200" Type="Int64" />
+    <Property Name="Deno500" Type="Int64" />
+    <Property Name="Deno1000" Type="Int64" />
+    <Property Name="Deno2000" Type="Int64" />
+    <Property Name="Total" Type="Int64" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ticket_DUP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryCategory" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDate" Type="DateTime" Precision="3" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputedAmount" Type="Double" />
+    <Property Name="TransactonTime" Type="DateTime" Precision="3" />
+    <Property Name="TransactionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransAmount" Type="Double" />
+    <Property Name="CardNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="EJFilePath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepositDate" Type="DateTime" Precision="3" />
+    <Property Name="DepositAmount" Type="Double" />
+    <Property Name="InternalAction" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HOComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CMSStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OldTicketId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmount" Type="Double" />
+    <Property Name="RecoveredAmount" Type="Double" />
+    <Property Name="TicketAttRefId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsAtmExist" Type="Boolean" />
+    <Property Name="ShortageFromDate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HoOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessingRemarks" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ATMpkid" Type="Int32" />
+    <Property Name="HOInitialAssignedDT" Type="DateTime" Precision="3" />
+    <Property Name="HOSubmitted" Type="Boolean" />
+    <Property Name="AssignedToLocationDT" Type="DateTime" Precision="3" />
+    <Property Name="LocSubmitted" Type="Boolean" />
+    <Property Name="LocationCompletionDT" Type="DateTime" Precision="3" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticketattachment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VisibleToMSP" Type="Boolean" />
+    <Property Name="VisibleToHO" Type="Boolean" />
+    <Property Name="VisibleToLocation" Type="Boolean" />
+    <Property Name="TypeOfAttachment" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FilePath" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="EmailSentTime" Type="DateTime" Precision="3" />
+    <Property Name="EmailType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticketlog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="InternalAction" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedFileName" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userloginhistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="LoginFrom" Type="DateTime" Precision="3" />
+    <Property Name="LoginTo" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="utilization_data">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CBRID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EOD_Date" Type="DateTime" Precision="3" />
+    <Property Name="Overage" Type="Double" />
+    <Property Name="Overage_Usage" Type="Double" />
+    <Property Name="Overage_Balance" Type="Double" />
+    <Property Name="Mid_cash" Type="Double" />
+    <Property Name="Mid_cash_Usage" Type="Double" />
+    <Property Name="Mid_Cash_Balance" Type="Double" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ATM_Deposit" Type="Double" />
+    <Property Name="ATM_Usage" Type="Double" />
+    <Property Name="ATM_Balance" Type="Double" />
+    <Property Name="Overage_1" Type="Double" />
+    <Property Name="Overage_1_usage" Type="Double" />
+    <Property Name="Overage_2" Type="Double" />
+    <Property Name="Overage_1_balance" Type="Double" />
+  </EntityType>
+  <EntityType Name="utilization_data_logs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CBRID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EOD_Date" Type="DateTime" Precision="3" />
+    <Property Name="Overage" Type="Double" />
+    <Property Name="Overage_Usage" Type="Double" />
+    <Property Name="Overage_Balance" Type="Double" />
+    <Property Name="Mid_cash" Type="Double" />
+    <Property Name="Mid_cash_Usage" Type="Double" />
+    <Property Name="Mid_Cash_Balance" Type="Double" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ATM_Deposit" Type="Double" />
+    <Property Name="ATM_Usage" Type="Double" />
+    <Property Name="ATM_Balance" Type="Double" />
+  </EntityType>
+  <EntityType Name="apilog_bkp_28042020">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestContentType" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="RequestContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RequestUri" Type="String" MaxLength="4500" FixedLength="false" Unicode="false" />
+    <Property Name="RequestMethod" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RequestTimestamp" Type="DateTime" Precision="3" />
+    <Property Name="ResponseContentType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseStatusCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ResponseTimestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="atmmaster_bkp_06042020">
+    <Key>
+      <PropertyRef Name="pkid" />
+      <PropertyRef Name="Company" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="pkid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="atmid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="atmcode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RoCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOverDate" Type="DateTime" Precision="3" />
+    <Property Name="HandOverDate" Type="DateTime" Precision="3" />
+    <Property Name="Company" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AtmType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RouteCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RouteName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CBRID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="atmmasterbkp">
+    <Key>
+      <PropertyRef Name="pkid" />
+      <PropertyRef Name="Company" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="pkid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="atmid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="atmcode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RoCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BankName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CityName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SubLocationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Zone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TakeOverDate" Type="DateTime" Precision="3" />
+    <Property Name="HandOverDate" Type="DateTime" Precision="3" />
+    <Property Name="Company" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AtmType" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RouteCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RouteName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CBRID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="batch_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="FromEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EmailSubject" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EmailContentType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Link" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="To" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="cc" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="EmailIdentifier" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DownloadPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="message_id" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PartialResponseSent" Type="Boolean" />
+    <Property Name="FinalResponseSent" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="errorcodemaster_bkp24042020">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorBucket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="Machine_Make" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Module_code" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Module_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TD_status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TD_status_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="M_status_error" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="M_status_error_Discreption" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="NextTrans_Flag" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="errorcodemasterdistinct_bkp24042020">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="errorcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorBucket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticket_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryCategory" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDate" Type="DateTime" Precision="3" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputedAmount" Type="Double" />
+    <Property Name="TransactonTime" Type="DateTime" Precision="3" />
+    <Property Name="TransactionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransAmount" Type="Double" />
+    <Property Name="CardNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="EJFilePath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepositDate" Type="DateTime" Precision="3" />
+    <Property Name="DepositAmount" Type="Double" />
+    <Property Name="InternalAction" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HOComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CMSStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OldTicketId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmount" Type="Double" />
+    <Property Name="RecoveredAmount" Type="Double" />
+    <Property Name="TicketAttRefId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsAtmExist" Type="Boolean" />
+    <Property Name="ShortageFromDate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HoOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessingRemarks" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ATMpkid" Type="Int32" />
+    <Property Name="HOInitialAssignedDT" Type="DateTime" Precision="3" />
+    <Property Name="HOSubmitted" Type="Boolean" />
+    <Property Name="AssignedToLocationDT" Type="DateTime" Precision="3" />
+    <Property Name="LocSubmitted" Type="Boolean" />
+    <Property Name="LocationCompletionDT" Type="DateTime" Precision="3" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastEOD" Type="DateTime" Precision="3" />
+    <Property Name="FirstEOD" Type="DateTime" Precision="3" />
+    <Property Name="WOORDERNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticket_bkp_08032020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryCategory" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDate" Type="DateTime" Precision="3" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputedAmount" Type="Double" />
+    <Property Name="TransactonTime" Type="DateTime" Precision="3" />
+    <Property Name="TransactionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransAmount" Type="Double" />
+    <Property Name="CardNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="EJFilePath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepositDate" Type="DateTime" Precision="3" />
+    <Property Name="DepositAmount" Type="Double" />
+    <Property Name="InternalAction" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HOComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CMSStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OldTicketId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmount" Type="Double" />
+    <Property Name="RecoveredAmount" Type="Double" />
+    <Property Name="TicketAttRefId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsAtmExist" Type="Boolean" />
+    <Property Name="ShortageFromDate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HoOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessingRemarks" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ATMpkid" Type="Int32" />
+    <Property Name="HOInitialAssignedDT" Type="DateTime" Precision="3" />
+    <Property Name="HOSubmitted" Type="Boolean" />
+    <Property Name="AssignedToLocationDT" Type="DateTime" Precision="3" />
+    <Property Name="LocSubmitted" Type="Boolean" />
+    <Property Name="LocationCompletionDT" Type="DateTime" Precision="3" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticket_dup_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="QueryCategory" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmailDate" Type="DateTime" Precision="3" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Bank" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HubLocation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputedAmount" Type="Double" />
+    <Property Name="TransactonTime" Type="DateTime" Precision="3" />
+    <Property Name="TransactionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TransAmount" Type="Double" />
+    <Property Name="CardNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="EJFilePath" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorRemark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="DepositDate" Type="DateTime" Precision="3" />
+    <Property Name="DepositAmount" Type="Double" />
+    <Property Name="InternalAction" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="HOComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FirstCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="SecondCustodianName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RuleErrorCode" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CMSStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="OldTicketId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TargetAmount" Type="Double" />
+    <Property Name="RecoveredAmount" Type="Double" />
+    <Property Name="TicketAttRefId" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsAtmExist" Type="Boolean" />
+    <Property Name="ShortageFromDate" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="HoOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LocOwner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ProcessingRemarks" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ATMpkid" Type="Int32" />
+    <Property Name="HOInitialAssignedDT" Type="DateTime" Precision="3" />
+    <Property Name="HOSubmitted" Type="Boolean" />
+    <Property Name="AssignedToLocationDT" Type="DateTime" Precision="3" />
+    <Property Name="LocSubmitted" Type="Boolean" />
+    <Property Name="LocationCompletionDT" Type="DateTime" Precision="3" />
+    <Property Name="AlternateCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticketattachments_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VisibleToMSP" Type="Boolean" />
+    <Property Name="VisibleToHO" Type="Boolean" />
+    <Property Name="VisibleToLocation" Type="Boolean" />
+    <Property Name="TypeOfAttachment" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="FilePath" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="EmailSentTime" Type="DateTime" Precision="3" />
+    <Property Name="EmailType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticketlog_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+      <PropertyRef Name="TicketID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="DisputeRejected" Type="Boolean" />
+    <Property Name="Justification" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="InternalAction" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedFileName" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedFile" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsType" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustCommentsBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CustComments" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="AssignedTo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="utilization_data_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+      <PropertyRef Name="TicketID" />
+      <PropertyRef Name="ATMID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MSP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BatchID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TicketID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CBRID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ATMID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EOD_Date" Type="DateTime" Precision="3" />
+    <Property Name="Overage" Type="Double" />
+    <Property Name="Overage_Usage" Type="Double" />
+    <Property Name="Overage_Balance" Type="Double" />
+    <Property Name="Mid_cash" Type="Double" />
+    <Property Name="Mid_cash_Usage" Type="Double" />
+    <Property Name="Mid_Cash_Balance" Type="Double" />
+    <Property Name="CreatedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ATM_Deposit" Type="Double" />
+    <Property Name="ATM_Usage" Type="Double" />
+    <Property Name="ATM_Balance" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="RMSAutomation_UATEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="apilogs" EntityType="Self.apilog" />
+    <EntitySet Name="atmmasters" EntityType="Self.atmmaster" />
+    <EntitySet Name="batches" EntityType="Self.batch" />
+    <EntitySet Name="batchresponses" EntityType="Self.batchresponse" />
+    <EntitySet Name="CassetteMasters" EntityType="Self.CassetteMaster" />
+    <EntitySet Name="EmailDatas" EntityType="Self.EmailData" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="employee_hierarchy" EntityType="Self.employee_hierarchy" />
+    <EntitySet Name="employee_role" EntityType="Self.employee_role" />
+    <EntitySet Name="errorcodemasters" EntityType="Self.errorcodemaster" />
+    <EntitySet Name="errorcodemasterdistincts" EntityType="Self.errorcodemasterdistinct" />
+    <EntitySet Name="errorrolemappings" EntityType="Self.errorrolemapping" />
+    <EntitySet Name="masters" EntityType="Self.master" />
+    <EntitySet Name="mspconfigurations" EntityType="Self.mspconfiguration" />
+    <EntitySet Name="oldrmstickets" EntityType="Self.oldrmsticket" />
+    <EntitySet Name="physical_shortage_temp" EntityType="Self.physical_shortage_temp" />
+    <EntitySet Name="recoveries" EntityType="Self.recovery" />
+    <EntitySet Name="recoverycollections" EntityType="Self.recoverycollection" />
+    <EntitySet Name="runruleenginelogs" EntityType="Self.runruleenginelog" />
+    <EntitySet Name="StatusChangeManuals" EntityType="Self.StatusChangeManual" />
+    <EntitySet Name="tickets" EntityType="Self.ticket" />
+    <EntitySet Name="Ticket_CounterData" EntityType="Self.Ticket_CounterData" />
+    <EntitySet Name="ticket_DUP" EntityType="Self.ticket_DUP" />
+    <EntitySet Name="ticketattachments" EntityType="Self.ticketattachment" />
+    <EntitySet Name="ticketlogs" EntityType="Self.ticketlog" />
+    <EntitySet Name="userloginhistories" EntityType="Self.userloginhistory" />
+    <EntitySet Name="utilization_data" EntityType="Self.utilization_data" />
+    <EntitySet Name="utilization_data_logs" EntityType="Self.utilization_data_logs" />
+    <EntitySet Name="apilog_bkp_28042020" EntityType="Self.apilog_bkp_28042020" />
+    <EntitySet Name="atmmaster_bkp_06042020" EntityType="Self.atmmaster_bkp_06042020" />
+    <EntitySet Name="atmmasterbkps" EntityType="Self.atmmasterbkp" />
+    <EntitySet Name="batch_bkp_06042020" EntityType="Self.batch_bkp_06042020" />
+    <EntitySet Name="errorcodemaster_bkp24042020" EntityType="Self.errorcodemaster_bkp24042020" />
+    <EntitySet Name="errorcodemasterdistinct_bkp24042020" EntityType="Self.errorcodemasterdistinct_bkp24042020" />
+    <EntitySet Name="ticket_bkp_06042020" EntityType="Self.ticket_bkp_06042020" />
+    <EntitySet Name="ticket_bkp_08032020" EntityType="Self.ticket_bkp_08032020" />
+    <EntitySet Name="ticket_dup_bkp_06042020" EntityType="Self.ticket_dup_bkp_06042020" />
+    <EntitySet Name="ticketattachments_bkp_06042020" EntityType="Self.ticketattachments_bkp_06042020" />
+    <EntitySet Name="ticketlog_bkp_06042020" EntityType="Self.ticketlog_bkp_06042020" />
+    <EntitySet Name="utilization_data_bkp_06042020" EntityType="Self.utilization_data_bkp_06042020" />
+  </EntityContainer>
+</Schema>

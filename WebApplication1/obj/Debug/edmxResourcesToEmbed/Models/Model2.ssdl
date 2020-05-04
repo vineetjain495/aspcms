@@ -1,0 +1,1671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RMSAutomation_UATModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="apilog">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestContentType" Type="varchar" MaxLength="450" />
+    <Property Name="RequestContent" Type="varchar(max)" />
+    <Property Name="RequestUri" Type="varchar" MaxLength="4500" />
+    <Property Name="RequestMethod" Type="varchar" MaxLength="45" />
+    <Property Name="RequestTimestamp" Type="datetime" />
+    <Property Name="ResponseContentType" Type="varchar" MaxLength="45" />
+    <Property Name="ResponseContent" Type="varchar(max)" />
+    <Property Name="ResponseStatusCode" Type="varchar" MaxLength="45" />
+    <Property Name="ResponseTimestamp" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.apilog_bkp_28042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="apilog_bkp_28042020">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestContentType" Type="varchar" MaxLength="450" />
+    <Property Name="RequestContent" Type="varchar(max)" />
+    <Property Name="RequestUri" Type="varchar" MaxLength="4500" />
+    <Property Name="RequestMethod" Type="varchar" MaxLength="45" />
+    <Property Name="RequestTimestamp" Type="datetime" />
+    <Property Name="ResponseContentType" Type="varchar" MaxLength="45" />
+    <Property Name="ResponseContent" Type="varchar(max)" />
+    <Property Name="ResponseStatusCode" Type="varchar" MaxLength="45" />
+    <Property Name="ResponseTimestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="atmmaster">
+    <Key>
+      <PropertyRef Name="pkid" />
+    </Key>
+    <Property Name="pkid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="atmid" Type="varchar" MaxLength="50" />
+    <Property Name="atmcode" Type="varchar" MaxLength="45" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="RoCode" Type="varchar" MaxLength="50" />
+    <Property Name="RoName" Type="varchar" MaxLength="100" />
+    <Property Name="LocationCode" Type="varchar" MaxLength="50" />
+    <Property Name="LocationName" Type="varchar" MaxLength="100" />
+    <Property Name="AccountName" Type="varchar" MaxLength="250" />
+    <Property Name="BankName" Type="varchar" MaxLength="250" />
+    <Property Name="CityName" Type="varchar" MaxLength="30" />
+    <Property Name="HubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="HubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="Zone" Type="varchar" MaxLength="45" />
+    <Property Name="State" Type="varchar" MaxLength="30" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="TakeOverDate" Type="datetime" />
+    <Property Name="HandOverDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AtmType" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="RouteCode" Type="varchar" MaxLength="100" />
+    <Property Name="RouteName" Type="varchar" MaxLength="500" />
+    <Property Name="CBRID" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.atmmaster_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="atmmaster_bkp_06042020">
+    <Key>
+      <PropertyRef Name="pkid" />
+      <PropertyRef Name="Company" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="pkid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="atmid" Type="varchar" MaxLength="50" />
+    <Property Name="atmcode" Type="varchar" MaxLength="45" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="RoCode" Type="varchar" MaxLength="50" />
+    <Property Name="RoName" Type="varchar" MaxLength="100" />
+    <Property Name="LocationCode" Type="varchar" MaxLength="50" />
+    <Property Name="LocationName" Type="varchar" MaxLength="100" />
+    <Property Name="AccountName" Type="varchar" MaxLength="250" />
+    <Property Name="BankName" Type="varchar" MaxLength="250" />
+    <Property Name="CityName" Type="varchar" MaxLength="30" />
+    <Property Name="HubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="HubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="Zone" Type="varchar" MaxLength="45" />
+    <Property Name="State" Type="varchar" MaxLength="30" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="TakeOverDate" Type="datetime" />
+    <Property Name="HandOverDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AtmType" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="RouteCode" Type="varchar" MaxLength="100" />
+    <Property Name="RouteName" Type="varchar" MaxLength="500" />
+    <Property Name="CBRID" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.atmmasterbkp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="atmmasterbkp">
+    <Key>
+      <PropertyRef Name="pkid" />
+      <PropertyRef Name="Company" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="pkid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="atmid" Type="varchar" MaxLength="50" />
+    <Property Name="atmcode" Type="varchar" MaxLength="45" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="RoCode" Type="varchar" MaxLength="50" />
+    <Property Name="RoName" Type="varchar" MaxLength="100" />
+    <Property Name="LocationCode" Type="varchar" MaxLength="50" />
+    <Property Name="LocationName" Type="varchar" MaxLength="100" />
+    <Property Name="AccountName" Type="varchar" MaxLength="250" />
+    <Property Name="BankName" Type="varchar" MaxLength="250" />
+    <Property Name="CityName" Type="varchar" MaxLength="30" />
+    <Property Name="HubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="HubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationCode" Type="varchar" MaxLength="100" />
+    <Property Name="SubLocationName" Type="varchar" MaxLength="100" />
+    <Property Name="Zone" Type="varchar" MaxLength="45" />
+    <Property Name="State" Type="varchar" MaxLength="30" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="TakeOverDate" Type="datetime" />
+    <Property Name="HandOverDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AtmType" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="RouteCode" Type="varchar" MaxLength="100" />
+    <Property Name="RouteName" Type="varchar" MaxLength="500" />
+    <Property Name="CBRID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="batch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="FromEmail" Type="varchar" MaxLength="200" />
+    <Property Name="EmailSubject" Type="varchar" MaxLength="500" />
+    <Property Name="EmailContentType" Type="varchar" MaxLength="500" />
+    <Property Name="EmailBody" Type="varchar(max)" />
+    <Property Name="Link" Type="varchar" MaxLength="5000" />
+    <Property Name="To" Type="varchar" MaxLength="5000" />
+    <Property Name="cc" Type="varchar" MaxLength="5000" />
+    <Property Name="EmailIdentifier" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="DownloadPath" Type="varchar" MaxLength="500" />
+    <Property Name="message_id" Type="varchar" MaxLength="500" />
+    <Property Name="PartialResponseSent" Type="bit" />
+    <Property Name="FinalResponseSent" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.batch_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="batch_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="FromEmail" Type="varchar" MaxLength="200" />
+    <Property Name="EmailSubject" Type="varchar" MaxLength="500" />
+    <Property Name="EmailContentType" Type="varchar" MaxLength="45" />
+    <Property Name="EmailBody" Type="varchar(max)" />
+    <Property Name="Link" Type="varchar" MaxLength="5000" />
+    <Property Name="To" Type="varchar" MaxLength="5000" />
+    <Property Name="cc" Type="varchar" MaxLength="5000" />
+    <Property Name="EmailIdentifier" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="DownloadPath" Type="varchar" MaxLength="500" />
+    <Property Name="message_id" Type="varchar" MaxLength="500" />
+    <Property Name="PartialResponseSent" Type="bit" />
+    <Property Name="FinalResponseSent" Type="bit" />
+  </EntityType>
+  <EntityType Name="batchresponse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" />
+    <Property Name="CompleteBatchResponse" Type="varchar" MaxLength="50" />
+    <Property Name="ResponseFilePath" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CassetteMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bank" Type="varchar" MaxLength="500" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="Type1" Type="int" />
+    <Property Name="Type2" Type="int" />
+    <Property Name="Type3" Type="int" />
+    <Property Name="Type4" Type="int" />
+    <Property Name="Type5" Type="int" />
+    <Property Name="MixType1" Type="int" />
+    <Property Name="MixType2" Type="int" />
+    <Property Name="MixType3" Type="int" />
+    <Property Name="MixType4" Type="int" />
+    <Property Name="MixType5" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'RMSAutomation_UAT.dbo.CHROME_ATMMASTER' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CHROME_ATMMASTER">
+          <Property Name="ATMID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ATMCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LocationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="HubLocationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="HubLocationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Zone" Type="nvarchar" MaxLength="50" />
+          <Property Name="TakeOverDate" Type="datetime" />
+          <Property Name="HandOverDate" Type="datetime" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="8" />
+          <Property Name="AtmType" Type="nvarchar" MaxLength="100" />
+          <Property Name="RouteCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Routename" Type="nvarchar" MaxLength="50" />
+          <Property Name="CBRID" Type="bigint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'RMSAutomation_UAT.dbo.CHROME_ATMMASTER_1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CHROME_ATMMASTER_1">
+          <Property Name="ATMID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ATMCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LocationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="LocationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="HubLocationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="HubLocationName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Zone" Type="nvarchar" MaxLength="50" />
+          <Property Name="TakeOverDate" Type="datetime" />
+          <Property Name="HandOverDate" Type="datetime" />
+          <Property Name="Company" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="8" />
+          <Property Name="AtmType" Type="nvarchar" MaxLength="100" />
+          <Property Name="RouteCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Routename" Type="nvarchar" MaxLength="50" />
+          <Property Name="CBRID" Type="bigint" />
+        </EntityType>-->
+  <EntityType Name="EmailData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemId" Type="varchar" MaxLength="255" />
+    <Property Name="ItemName" Type="varchar" MaxLength="255" />
+    <Property Name="ItemType" Type="varchar" MaxLength="255" />
+    <Property Name="IsProcessed" Type="bit" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type_EmpCode" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="RoleCode" Type="int" />
+    <Property Name="RightsCode" Type="int" />
+  </EntityType>
+  <EntityType Name="employee_hierarchy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeCode" Type="varchar" MaxLength="150" />
+    <Property Name="Region_Code" Type="varchar" MaxLength="150" />
+    <Property Name="Loc_Code" Type="varchar" MaxLength="150" />
+    <Property Name="Sub_Location_Code" Type="varchar" MaxLength="150" />
+    <Property Name="Hub_Location_Code" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="IsActive" Type="tinyint" />
+    <Property Name="Zone" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="employee_role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="150" />
+    <Property Name="TypeCode" Type="int" />
+    <Property Name="Type_EmpCode" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="RoleCode" Type="int" />
+    <Property Name="RightsCode" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="EncryptOtp" Type="varchar" MaxLength="10" />
+    <Property Name="PassChangeFlag" Type="bit" />
+    <Property Name="UserNotAllocation" Type="bit" />
+    <Property Name="MspCategory" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="errorcodemaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorBucket" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Machine_Make" Type="varchar" MaxLength="500" />
+    <Property Name="Module_code" Type="varchar" MaxLength="500" />
+    <Property Name="Module_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="TD_status" Type="varchar" MaxLength="500" />
+    <Property Name="TD_status_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="M_status_error" Type="varchar" MaxLength="500" />
+    <Property Name="M_status_error_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="NextTrans_Flag" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.errorcodemaster_bkp24042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="errorcodemaster_bkp24042020">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorBucket" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Machine_Make" Type="varchar" MaxLength="500" />
+    <Property Name="Module_code" Type="varchar" MaxLength="500" />
+    <Property Name="Module_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="TD_status" Type="varchar" MaxLength="500" />
+    <Property Name="TD_status_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="M_status_error" Type="varchar" MaxLength="500" />
+    <Property Name="M_status_error_Discreption" Type="varchar" MaxLength="500" />
+    <Property Name="NextTrans_Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="errorcodemasterdistinct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="errorcode" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorBucket" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.errorcodemasterdistinct_bkp24042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="errorcodemasterdistinct_bkp24042020">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="errorcode" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorBucket" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="errorrolemapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="ErrorID" Type="int" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="master">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="ParentType" Type="varchar" MaxLength="50" />
+    <Property Name="ParentCode" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="tinyint" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="mspconfiguration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DomainName" Type="varchar" MaxLength="100" />
+    <Property Name="MSPName" Type="varchar" MaxLength="50" />
+    <Property Name="ATMID" Type="varchar" MaxLength="500" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="ImageLogo" Type="varchar" MaxLength="8000" />
+    <Property Name="NoExcessCertificateReq" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="oldrmstickets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountname" Type="varchar" MaxLength="50" />
+    <Property Name="atmid" Type="varchar" MaxLength="50" />
+    <Property Name="cardno" Type="varchar" MaxLength="100" />
+    <Property Name="DispDate" Type="datetime" />
+    <Property Name="DisputeAmt" Type="float" />
+    <Property Name="RecoveredAmt" Type="float" />
+    <Property Name="RefNo" Type="varchar" MaxLength="100" />
+    <Property Name="TargetAmt" Type="float" />
+    <Property Name="TranDate" Type="datetime" />
+    <Property Name="TranNo" Type="varchar" MaxLength="50" />
+    <Property Name="cmsstatus" Type="varchar" MaxLength="50" />
+    <Property Name="custstatus" Type="varchar" MaxLength="50" />
+    <Property Name="errorcode" Type="varchar" MaxLength="50" />
+    <Property Name="feasibleid" Type="varchar" MaxLength="100" />
+    <Property Name="territorystatus" Type="varchar" MaxLength="50" />
+    <Property Name="pendingamount" Type="float" />
+    <Property Name="querycategory" Type="varchar" MaxLength="50" />
+    <Property Name="atmtype" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="typecode" Type="varchar" MaxLength="50" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'RMSAutomation_UAT.dbo.Physical_Shortage' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Physical_Shortage">
+          <Property Name="AtmCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EODDateTime" Type="datetime" />
+          <Property Name="EODDate" Type="date" />
+          <Property Name="PCC_ShortageCash_Total" Type="bigint" />
+          <Property Name="PCC_ABShortageCash_Total" Type="bigint" />
+          <Property Name="Shortage_Total" Type="bigint" />
+          <Property Name="Shortage_2000" Type="bigint" />
+          <Property Name="Shortage_500" Type="bigint" />
+          <Property Name="Shortage_200" Type="bigint" />
+          <Property Name="Shortage_100" Type="bigint" />
+          <Property Name="Shortage_50" Type="bigint" />
+          <Property Name="MSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ATMTYPE" Type="nvarchar" MaxLength="100" />
+          <Property Name="Query_Type" Type="varchar" MaxLength="17" />
+          <Property Name="BANK" Type="nvarchar" MaxLength="50" />
+          <Property Name="REFNO" Type="bigint" />
+          <Property Name="Cust1Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cust1Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cust2Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cust2Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+  <EntityType Name="physical_shortage_temp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CBRID" Type="bigint" />
+    <Property Name="ATMID" Type="varchar" MaxLength="50" />
+    <Property Name="EODDATETIME" Type="datetime" />
+    <Property Name="EODDATE" Type="datetime" />
+    <Property Name="TRANTIME" Type="datetime" />
+    <Property Name="Overage_Total" Type="float" />
+    <Property Name="Shortage_Total" Type="float" />
+    <Property Name="Overage_2000" Type="float" />
+    <Property Name="Overage_500" Type="float" />
+    <Property Name="Overage_200" Type="float" />
+    <Property Name="Overage_100" Type="float" />
+    <Property Name="Overage_50" Type="float" />
+    <Property Name="Shortage_2000" Type="float" />
+    <Property Name="Shortage_500" Type="float" />
+    <Property Name="Shortage_200" Type="float" />
+    <Property Name="Shortage_10" Type="float" />
+    <Property Name="Shortage_50" Type="float" />
+  </EntityType>
+  <EntityType Name="recovery">
+    <Key>
+      <PropertyRef Name="RecoveryId" />
+    </Key>
+    <Property Name="RecoveryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecoveryNo" Type="varchar" MaxLength="100" />
+    <Property Name="BatchId" Type="varchar" MaxLength="100" />
+    <Property Name="TicketId" Type="varchar" MaxLength="100" />
+    <Property Name="RefTicketId" Type="varchar" MaxLength="100" />
+    <Property Name="RecoveryFromEmpId" Type="varchar" MaxLength="45" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="500" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="Status2" Type="varchar" MaxLength="45" />
+    <Property Name="RecoveryAmount" Type="float" />
+    <Property Name="ReceivedAmount" Type="float" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="RecoveryAssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="LocationSubmitted" Type="bit" />
+    <Property Name="MisSubmitted" Type="bit" />
+  </EntityType>
+  <EntityType Name="recoverycollection">
+    <Key>
+      <PropertyRef Name="CollectionId" />
+    </Key>
+    <Property Name="CollectionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollectionNumber" Type="varchar" MaxLength="100" />
+    <Property Name="RecoveryNumber" Type="varchar" MaxLength="100" />
+    <Property Name="RecoveryAmount" Type="float" />
+    <Property Name="TransDate" Type="datetime" />
+    <Property Name="ReceivedAmount" Type="float" />
+    <Property Name="TransactionMode" Type="varchar" MaxLength="45" />
+    <Property Name="TransactionNumber" Type="varchar" MaxLength="45" />
+    <Property Name="TransDetails" Type="varchar" MaxLength="5000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="Status2" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="OwnerOfCollection" Type="varchar" MaxLength="45" />
+    <Property Name="CreationComments" Type="varchar" MaxLength="5000" />
+    <Property Name="ApproverComments" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="runruleenginelogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="RanRuleEngineWeb" Type="bit" />
+    <Property Name="RanRuleEngineWebDate" Type="datetime" />
+    <Property Name="RuleEngineRemarks" Type="varchar" MaxLength="100" />
+    <Property Name="RuleEngineInitiator" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="StatusChangeManual">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SrNo" Type="int" />
+    <Property Name="Justification" Type="varchar" MaxLength="100" />
+    <Property Name="OldStatus" Type="varchar" MaxLength="100" />
+    <Property Name="NewStatus" Type="varchar" MaxLength="100" />
+    <Property Name="OldCMSStatus" Type="varchar" MaxLength="100" />
+    <Property Name="NewCMSStatus" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="Account" Type="varchar" MaxLength="45" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="QueryType" Type="varchar" MaxLength="45" />
+    <Property Name="QueryCategory" Type="varchar" MaxLength="45" />
+    <Property Name="EmailID" Type="varchar" MaxLength="500" />
+    <Property Name="EmailDate" Type="datetime" />
+    <Property Name="IncidentDate" Type="datetime" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" />
+    <Property Name="Bank" Type="varchar" MaxLength="45" />
+    <Property Name="Region" Type="varchar" MaxLength="100" />
+    <Property Name="Location" Type="varchar" MaxLength="100" />
+    <Property Name="HubLocation" Type="varchar" MaxLength="100" />
+    <Property Name="DisputedAmount" Type="float" />
+    <Property Name="TransactonTime" Type="datetime" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="100" />
+    <Property Name="TransAmount" Type="float" />
+    <Property Name="CardNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceNo" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeComments" Type="varchar" MaxLength="8000" />
+    <Property Name="UploadFile" Type="varchar" MaxLength="8000" />
+    <Property Name="EJFilePath" Type="varchar" MaxLength="8000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorRemark" Type="varchar" MaxLength="100" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="DepositAmount" Type="float" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="8000" />
+    <Property Name="HOComments" Type="varchar" MaxLength="8000" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="SecondCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="SecondCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="CMSStatus" Type="varchar" MaxLength="45" />
+    <Property Name="CustStatus" Type="varchar" MaxLength="45" />
+    <Property Name="OldTicketId" Type="varchar" MaxLength="45" />
+    <Property Name="TargetAmount" Type="float" />
+    <Property Name="RecoveredAmount" Type="float" />
+    <Property Name="TicketAttRefId" Type="varchar" MaxLength="500" />
+    <Property Name="IsAtmExist" Type="bit" Nullable="false" />
+    <Property Name="ShortageFromDate" Type="varchar" MaxLength="45" />
+    <Property Name="HoOwner" Type="varchar" MaxLength="100" />
+    <Property Name="LocOwner" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessingRemarks" Type="varchar" MaxLength="8000" />
+    <Property Name="ATMpkid" Type="int" />
+    <Property Name="HOInitialAssignedDT" Type="datetime" />
+    <Property Name="HOSubmitted" Type="bit" />
+    <Property Name="AssignedToLocationDT" Type="datetime" />
+    <Property Name="LocSubmitted" Type="bit" />
+    <Property Name="LocationCompletionDT" Type="datetime" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="LastEOD" Type="datetime" />
+    <Property Name="FirstEOD" Type="datetime" />
+    <Property Name="WOORDERNo" Type="varchar" MaxLength="100" />
+    <Property Name="RunRuleEngine" Type="bit" />
+    <Property Name="JVHAmount" Type="float" />
+    <Property Name="TerritoryJustification" Type="varchar" MaxLength="8000" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.ticket_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ticket_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="Account" Type="varchar" MaxLength="45" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="QueryType" Type="varchar" MaxLength="45" />
+    <Property Name="QueryCategory" Type="varchar" MaxLength="45" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="EmailDate" Type="datetime" />
+    <Property Name="IncidentDate" Type="datetime" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" />
+    <Property Name="Bank" Type="varchar" MaxLength="45" />
+    <Property Name="Region" Type="varchar" MaxLength="45" />
+    <Property Name="Location" Type="varchar" MaxLength="45" />
+    <Property Name="HubLocation" Type="varchar" MaxLength="45" />
+    <Property Name="DisputedAmount" Type="float" />
+    <Property Name="TransactonTime" Type="datetime" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="100" />
+    <Property Name="TransAmount" Type="float" />
+    <Property Name="CardNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceNo" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeComments" Type="varchar" MaxLength="8000" />
+    <Property Name="UploadFile" Type="varchar" MaxLength="8000" />
+    <Property Name="EJFilePath" Type="varchar" MaxLength="8000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorRemark" Type="varchar" MaxLength="100" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="DepositAmount" Type="float" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="8000" />
+    <Property Name="HOComments" Type="varchar" MaxLength="8000" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="SecondCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="SecondCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="CMSStatus" Type="varchar" MaxLength="45" />
+    <Property Name="CustStatus" Type="varchar" MaxLength="45" />
+    <Property Name="OldTicketId" Type="varchar" MaxLength="45" />
+    <Property Name="TargetAmount" Type="float" />
+    <Property Name="RecoveredAmount" Type="float" />
+    <Property Name="TicketAttRefId" Type="varchar" MaxLength="500" />
+    <Property Name="IsAtmExist" Type="bit" />
+    <Property Name="ShortageFromDate" Type="varchar" MaxLength="45" />
+    <Property Name="HoOwner" Type="varchar" MaxLength="100" />
+    <Property Name="LocOwner" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessingRemarks" Type="varchar" MaxLength="8000" />
+    <Property Name="ATMpkid" Type="int" />
+    <Property Name="HOInitialAssignedDT" Type="datetime" />
+    <Property Name="HOSubmitted" Type="bit" />
+    <Property Name="AssignedToLocationDT" Type="datetime" />
+    <Property Name="LocSubmitted" Type="bit" />
+    <Property Name="LocationCompletionDT" Type="datetime" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+    <Property Name="LastEOD" Type="datetime" />
+    <Property Name="FirstEOD" Type="datetime" />
+    <Property Name="WOORDERNo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.ticket_bkp_08032020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ticket_bkp_08032020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="Account" Type="varchar" MaxLength="45" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="QueryType" Type="varchar" MaxLength="45" />
+    <Property Name="QueryCategory" Type="varchar" MaxLength="45" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="EmailDate" Type="datetime" />
+    <Property Name="IncidentDate" Type="datetime" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" />
+    <Property Name="Bank" Type="varchar" MaxLength="45" />
+    <Property Name="Region" Type="varchar" MaxLength="45" />
+    <Property Name="Location" Type="varchar" MaxLength="45" />
+    <Property Name="HubLocation" Type="varchar" MaxLength="45" />
+    <Property Name="DisputedAmount" Type="float" />
+    <Property Name="TransactonTime" Type="datetime" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="100" />
+    <Property Name="TransAmount" Type="float" />
+    <Property Name="CardNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceNo" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeComments" Type="varchar" MaxLength="8000" />
+    <Property Name="UploadFile" Type="varchar" MaxLength="8000" />
+    <Property Name="EJFilePath" Type="varchar" MaxLength="8000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorRemark" Type="varchar" MaxLength="100" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="DepositAmount" Type="float" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="8000" />
+    <Property Name="HOComments" Type="varchar" MaxLength="8000" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="SecondCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="SecondCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="CMSStatus" Type="varchar" MaxLength="45" />
+    <Property Name="CustStatus" Type="varchar" MaxLength="45" />
+    <Property Name="OldTicketId" Type="varchar" MaxLength="45" />
+    <Property Name="TargetAmount" Type="float" />
+    <Property Name="RecoveredAmount" Type="float" />
+    <Property Name="TicketAttRefId" Type="varchar" MaxLength="500" />
+    <Property Name="IsAtmExist" Type="bit" />
+    <Property Name="ShortageFromDate" Type="varchar" MaxLength="45" />
+    <Property Name="HoOwner" Type="varchar" MaxLength="100" />
+    <Property Name="LocOwner" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessingRemarks" Type="varchar" MaxLength="8000" />
+    <Property Name="ATMpkid" Type="int" />
+    <Property Name="HOInitialAssignedDT" Type="datetime" />
+    <Property Name="HOSubmitted" Type="bit" />
+    <Property Name="AssignedToLocationDT" Type="datetime" />
+    <Property Name="LocSubmitted" Type="bit" />
+    <Property Name="LocationCompletionDT" Type="datetime" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ticket_CounterData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="100" />
+    <Property Name="ATMID" Type="varchar" MaxLength="100" />
+    <Property Name="EODDate" Type="datetime" />
+    <Property Name="QueryType" Type="varchar" MaxLength="100" />
+    <Property Name="CountertType" Type="varchar" MaxLength="200" />
+    <Property Name="SubType" Type="varchar" MaxLength="200" />
+    <Property Name="Deno50" Type="bigint" />
+    <Property Name="Deno100" Type="bigint" />
+    <Property Name="Deno200" Type="bigint" />
+    <Property Name="Deno500" Type="bigint" />
+    <Property Name="Deno1000" Type="bigint" />
+    <Property Name="Deno2000" Type="bigint" />
+    <Property Name="Total" Type="bigint" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ticket_DUP">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="Account" Type="varchar" MaxLength="45" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="QueryType" Type="varchar" MaxLength="45" />
+    <Property Name="QueryCategory" Type="varchar" MaxLength="45" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="EmailDate" Type="datetime" />
+    <Property Name="IncidentDate" Type="datetime" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" />
+    <Property Name="Bank" Type="varchar" MaxLength="45" />
+    <Property Name="Region" Type="varchar" MaxLength="45" />
+    <Property Name="Location" Type="varchar" MaxLength="45" />
+    <Property Name="HubLocation" Type="varchar" MaxLength="45" />
+    <Property Name="DisputedAmount" Type="float" />
+    <Property Name="TransactonTime" Type="datetime" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="100" />
+    <Property Name="TransAmount" Type="float" />
+    <Property Name="CardNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceNo" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeComments" Type="varchar" MaxLength="8000" />
+    <Property Name="UploadFile" Type="varchar" MaxLength="8000" />
+    <Property Name="EJFilePath" Type="varchar" MaxLength="8000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorRemark" Type="varchar" MaxLength="100" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="DepositAmount" Type="float" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="8000" />
+    <Property Name="HOComments" Type="varchar" MaxLength="8000" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="SecondCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="SecondCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="CMSStatus" Type="varchar" MaxLength="45" />
+    <Property Name="CustStatus" Type="varchar" MaxLength="45" />
+    <Property Name="OldTicketId" Type="varchar" MaxLength="45" />
+    <Property Name="TargetAmount" Type="float" />
+    <Property Name="RecoveredAmount" Type="float" />
+    <Property Name="TicketAttRefId" Type="varchar" MaxLength="500" />
+    <Property Name="IsAtmExist" Type="bit" />
+    <Property Name="ShortageFromDate" Type="varchar" MaxLength="45" />
+    <Property Name="HoOwner" Type="varchar" MaxLength="100" />
+    <Property Name="LocOwner" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessingRemarks" Type="varchar" MaxLength="8000" />
+    <Property Name="ATMpkid" Type="int" />
+    <Property Name="HOInitialAssignedDT" Type="datetime" />
+    <Property Name="HOSubmitted" Type="bit" />
+    <Property Name="AssignedToLocationDT" Type="datetime" />
+    <Property Name="LocSubmitted" Type="bit" />
+    <Property Name="LocationCompletionDT" Type="datetime" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.ticket_dup_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ticket_dup_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BatchID" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" />
+    <Property Name="Account" Type="varchar" MaxLength="45" />
+    <Property Name="Type" Type="varchar" MaxLength="45" />
+    <Property Name="QueryType" Type="varchar" MaxLength="45" />
+    <Property Name="QueryCategory" Type="varchar" MaxLength="45" />
+    <Property Name="EmailID" Type="varchar" MaxLength="100" />
+    <Property Name="EmailDate" Type="datetime" />
+    <Property Name="IncidentDate" Type="datetime" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" />
+    <Property Name="Bank" Type="varchar" MaxLength="45" />
+    <Property Name="Region" Type="varchar" MaxLength="45" />
+    <Property Name="Location" Type="varchar" MaxLength="45" />
+    <Property Name="HubLocation" Type="varchar" MaxLength="45" />
+    <Property Name="DisputedAmount" Type="float" />
+    <Property Name="TransactonTime" Type="datetime" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="100" />
+    <Property Name="TransAmount" Type="float" />
+    <Property Name="CardNo" Type="varchar" MaxLength="100" />
+    <Property Name="ReferenceNo" Type="varchar" MaxLength="100" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeComments" Type="varchar" MaxLength="8000" />
+    <Property Name="UploadFile" Type="varchar" MaxLength="8000" />
+    <Property Name="EJFilePath" Type="varchar" MaxLength="8000" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="ErrorCode" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorRemark" Type="varchar" MaxLength="100" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="DepositDate" Type="datetime" />
+    <Property Name="DepositAmount" Type="float" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="8000" />
+    <Property Name="HOComments" Type="varchar" MaxLength="8000" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="FirstCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="SecondCustodianCode" Type="varchar" MaxLength="45" />
+    <Property Name="SecondCustodianName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+    <Property Name="RuleErrorCode" Type="varchar" MaxLength="45" />
+    <Property Name="CMSStatus" Type="varchar" MaxLength="45" />
+    <Property Name="CustStatus" Type="varchar" MaxLength="45" />
+    <Property Name="OldTicketId" Type="varchar" MaxLength="45" />
+    <Property Name="TargetAmount" Type="float" />
+    <Property Name="RecoveredAmount" Type="float" />
+    <Property Name="TicketAttRefId" Type="varchar" MaxLength="500" />
+    <Property Name="IsAtmExist" Type="bit" />
+    <Property Name="ShortageFromDate" Type="varchar" MaxLength="45" />
+    <Property Name="HoOwner" Type="varchar" MaxLength="100" />
+    <Property Name="LocOwner" Type="varchar" MaxLength="100" />
+    <Property Name="ProcessingRemarks" Type="varchar" MaxLength="8000" />
+    <Property Name="ATMpkid" Type="int" />
+    <Property Name="HOInitialAssignedDT" Type="datetime" />
+    <Property Name="HOSubmitted" Type="bit" />
+    <Property Name="AssignedToLocationDT" Type="datetime" />
+    <Property Name="LocSubmitted" Type="bit" />
+    <Property Name="LocationCompletionDT" Type="datetime" />
+    <Property Name="AlternateCardNo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'RMSAutomation_UAT.dbo.TICKET_UPDATE_DATA' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TICKET_UPDATE_DATA">
+          <Property Name="Batch_ID" Type="float" />
+          <Property Name="CMS_DisputeID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Error_Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="CMS_JUTIFICATION" Type="nvarchar" MaxLength="255" />
+          <Property Name="CMS_STATUS" Type="nvarchar" MaxLength="255" />
+          <Property Name="Deposited_Date" Type="datetime" />
+          <Property Name="Deposited_Amount" Type="float" />
+          <Property Name="CMS_Closure_Comments" Type="nvarchar" MaxLength="255" />
+          <Property Name="Internal_Status" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="ticketattachments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketId" Type="varchar" MaxLength="100" />
+    <Property Name="VisibleToMSP" Type="bit" />
+    <Property Name="VisibleToHO" Type="bit" />
+    <Property Name="VisibleToLocation" Type="bit" />
+    <Property Name="TypeOfAttachment" Type="varchar" MaxLength="45" />
+    <Property Name="FilePath" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="EmailSentTime" Type="datetime" />
+    <Property Name="EmailType" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.ticketattachments_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ticketattachments_bkp_06042020">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketId" Type="varchar" MaxLength="100" />
+    <Property Name="VisibleToMSP" Type="bit" />
+    <Property Name="VisibleToHO" Type="bit" />
+    <Property Name="VisibleToLocation" Type="bit" />
+    <Property Name="TypeOfAttachment" Type="varchar" MaxLength="45" />
+    <Property Name="FilePath" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="EmailSentTime" Type="datetime" />
+    <Property Name="EmailType" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="ticketlog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="5000" />
+    <Property Name="UploadedFileName" Type="varchar" MaxLength="5000" />
+    <Property Name="UploadedFile" Type="varchar" MaxLength="8000" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.ticketlog_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ticketlog_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+      <PropertyRef Name="TicketID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="45" />
+    <Property Name="DisputeRejected" Type="bit" />
+    <Property Name="Justification" Type="varchar" MaxLength="8000" />
+    <Property Name="InternalAction" Type="varchar" MaxLength="5000" />
+    <Property Name="UploadedFileName" Type="varchar" MaxLength="5000" />
+    <Property Name="UploadedFile" Type="varchar" MaxLength="8000" />
+    <Property Name="CustCommentsType" Type="varchar" MaxLength="45" />
+    <Property Name="CustCommentsBy" Type="varchar" MaxLength="45" />
+    <Property Name="CustComments" Type="varchar" MaxLength="8000" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="AssignedTo" Type="varchar" MaxLength="45" />
+    <Property Name="Source" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="userloginhistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="45" />
+    <Property Name="LoginFrom" Type="datetime" />
+    <Property Name="LoginTo" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="utilization_data">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="CBRID" Type="varchar" MaxLength="45" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="EOD_Date" Type="datetime" />
+    <Property Name="Overage" Type="float" />
+    <Property Name="Overage_Usage" Type="float" />
+    <Property Name="Overage_Balance" Type="float" />
+    <Property Name="Mid_cash" Type="float" />
+    <Property Name="Mid_cash_Usage" Type="float" />
+    <Property Name="Mid_Cash_Balance" Type="float" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ATM_Deposit" Type="float" />
+    <Property Name="ATM_Usage" Type="float" />
+    <Property Name="ATM_Balance" Type="float" />
+    <Property Name="Overage_1" Type="float" />
+    <Property Name="Overage_1_usage" Type="float" />
+    <Property Name="Overage_2" Type="float" />
+    <Property Name="Overage_1_balance" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RMSAutomation_UAT.dbo.utilization_data_bkp_06042020' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="utilization_data_bkp_06042020">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BatchID" />
+      <PropertyRef Name="TicketID" />
+      <PropertyRef Name="ATMID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="CBRID" Type="varchar" MaxLength="45" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="EOD_Date" Type="datetime" />
+    <Property Name="Overage" Type="float" />
+    <Property Name="Overage_Usage" Type="float" />
+    <Property Name="Overage_Balance" Type="float" />
+    <Property Name="Mid_cash" Type="float" />
+    <Property Name="Mid_cash_Usage" Type="float" />
+    <Property Name="Mid_Cash_Balance" Type="float" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ATM_Deposit" Type="float" />
+    <Property Name="ATM_Usage" Type="float" />
+    <Property Name="ATM_Balance" Type="float" />
+  </EntityType>
+  <EntityType Name="utilization_data_logs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MSP" Type="varchar" MaxLength="45" />
+    <Property Name="BatchID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="TicketID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="CBRID" Type="varchar" MaxLength="45" />
+    <Property Name="ATMID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="EOD_Date" Type="datetime" />
+    <Property Name="Overage" Type="float" />
+    <Property Name="Overage_Usage" Type="float" />
+    <Property Name="Overage_Balance" Type="float" />
+    <Property Name="Mid_cash" Type="float" />
+    <Property Name="Mid_cash_Usage" Type="float" />
+    <Property Name="Mid_Cash_Balance" Type="float" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ATM_Deposit" Type="float" />
+    <Property Name="ATM_Usage" Type="float" />
+    <Property Name="ATM_Balance" Type="float" />
+  </EntityType>
+  <EntityContainer Name="RMSAutomation_UATModel1StoreContainer">
+    <EntitySet Name="apilog" EntityType="Self.apilog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="atmmaster" EntityType="Self.atmmaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="batch" EntityType="Self.batch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="batchresponse" EntityType="Self.batchresponse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CassetteMaster" EntityType="Self.CassetteMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailData" EntityType="Self.EmailData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee_hierarchy" EntityType="Self.employee_hierarchy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee_role" EntityType="Self.employee_role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="errorcodemaster" EntityType="Self.errorcodemaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="errorcodemasterdistinct" EntityType="Self.errorcodemasterdistinct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="errorrolemapping" EntityType="Self.errorrolemapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="master" EntityType="Self.master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mspconfiguration" EntityType="Self.mspconfiguration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="oldrmstickets" EntityType="Self.oldrmstickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="physical_shortage_temp" EntityType="Self.physical_shortage_temp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="recovery" EntityType="Self.recovery" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="recoverycollection" EntityType="Self.recoverycollection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="runruleenginelogs" EntityType="Self.runruleenginelogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusChangeManual" EntityType="Self.StatusChangeManual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ticket" EntityType="Self.ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_CounterData" EntityType="Self.Ticket_CounterData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ticket_DUP" EntityType="Self.ticket_DUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ticketattachments" EntityType="Self.ticketattachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ticketlog" EntityType="Self.ticketlog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userloginhistory" EntityType="Self.userloginhistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="utilization_data" EntityType="Self.utilization_data" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="utilization_data_logs" EntityType="Self.utilization_data_logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="apilog_bkp_28042020" EntityType="Self.apilog_bkp_28042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [apilog_bkp_28042020].[RequestID] AS [RequestID], 
+    [apilog_bkp_28042020].[RequestContentType] AS [RequestContentType], 
+    [apilog_bkp_28042020].[RequestContent] AS [RequestContent], 
+    [apilog_bkp_28042020].[RequestUri] AS [RequestUri], 
+    [apilog_bkp_28042020].[RequestMethod] AS [RequestMethod], 
+    [apilog_bkp_28042020].[RequestTimestamp] AS [RequestTimestamp], 
+    [apilog_bkp_28042020].[ResponseContentType] AS [ResponseContentType], 
+    [apilog_bkp_28042020].[ResponseContent] AS [ResponseContent], 
+    [apilog_bkp_28042020].[ResponseStatusCode] AS [ResponseStatusCode], 
+    [apilog_bkp_28042020].[ResponseTimestamp] AS [ResponseTimestamp]
+    FROM [dbo].[apilog_bkp_28042020] AS [apilog_bkp_28042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="atmmaster_bkp_06042020" EntityType="Self.atmmaster_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [atmmaster_bkp_06042020].[pkid] AS [pkid], 
+    [atmmaster_bkp_06042020].[atmid] AS [atmid], 
+    [atmmaster_bkp_06042020].[atmcode] AS [atmcode], 
+    [atmmaster_bkp_06042020].[MSP] AS [MSP], 
+    [atmmaster_bkp_06042020].[RoCode] AS [RoCode], 
+    [atmmaster_bkp_06042020].[RoName] AS [RoName], 
+    [atmmaster_bkp_06042020].[LocationCode] AS [LocationCode], 
+    [atmmaster_bkp_06042020].[LocationName] AS [LocationName], 
+    [atmmaster_bkp_06042020].[AccountName] AS [AccountName], 
+    [atmmaster_bkp_06042020].[BankName] AS [BankName], 
+    [atmmaster_bkp_06042020].[CityName] AS [CityName], 
+    [atmmaster_bkp_06042020].[HubLocationCode] AS [HubLocationCode], 
+    [atmmaster_bkp_06042020].[HubLocationName] AS [HubLocationName], 
+    [atmmaster_bkp_06042020].[SubLocationCode] AS [SubLocationCode], 
+    [atmmaster_bkp_06042020].[SubLocationName] AS [SubLocationName], 
+    [atmmaster_bkp_06042020].[Zone] AS [Zone], 
+    [atmmaster_bkp_06042020].[State] AS [State], 
+    [atmmaster_bkp_06042020].[Address] AS [Address], 
+    [atmmaster_bkp_06042020].[TakeOverDate] AS [TakeOverDate], 
+    [atmmaster_bkp_06042020].[HandOverDate] AS [HandOverDate], 
+    [atmmaster_bkp_06042020].[Company] AS [Company], 
+    [atmmaster_bkp_06042020].[status] AS [status], 
+    [atmmaster_bkp_06042020].[AtmType] AS [AtmType], 
+    [atmmaster_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [atmmaster_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [atmmaster_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [atmmaster_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [atmmaster_bkp_06042020].[RuleErrorCode] AS [RuleErrorCode], 
+    [atmmaster_bkp_06042020].[RouteCode] AS [RouteCode], 
+    [atmmaster_bkp_06042020].[RouteName] AS [RouteName], 
+    [atmmaster_bkp_06042020].[CBRID] AS [CBRID]
+    FROM [dbo].[atmmaster_bkp_06042020] AS [atmmaster_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="atmmasterbkp" EntityType="Self.atmmasterbkp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [atmmasterbkp].[pkid] AS [pkid], 
+    [atmmasterbkp].[atmid] AS [atmid], 
+    [atmmasterbkp].[atmcode] AS [atmcode], 
+    [atmmasterbkp].[MSP] AS [MSP], 
+    [atmmasterbkp].[RoCode] AS [RoCode], 
+    [atmmasterbkp].[RoName] AS [RoName], 
+    [atmmasterbkp].[LocationCode] AS [LocationCode], 
+    [atmmasterbkp].[LocationName] AS [LocationName], 
+    [atmmasterbkp].[AccountName] AS [AccountName], 
+    [atmmasterbkp].[BankName] AS [BankName], 
+    [atmmasterbkp].[CityName] AS [CityName], 
+    [atmmasterbkp].[HubLocationCode] AS [HubLocationCode], 
+    [atmmasterbkp].[HubLocationName] AS [HubLocationName], 
+    [atmmasterbkp].[SubLocationCode] AS [SubLocationCode], 
+    [atmmasterbkp].[SubLocationName] AS [SubLocationName], 
+    [atmmasterbkp].[Zone] AS [Zone], 
+    [atmmasterbkp].[State] AS [State], 
+    [atmmasterbkp].[Address] AS [Address], 
+    [atmmasterbkp].[TakeOverDate] AS [TakeOverDate], 
+    [atmmasterbkp].[HandOverDate] AS [HandOverDate], 
+    [atmmasterbkp].[Company] AS [Company], 
+    [atmmasterbkp].[status] AS [status], 
+    [atmmasterbkp].[AtmType] AS [AtmType], 
+    [atmmasterbkp].[CreatedBy] AS [CreatedBy], 
+    [atmmasterbkp].[CreatedDate] AS [CreatedDate], 
+    [atmmasterbkp].[ModifiedBy] AS [ModifiedBy], 
+    [atmmasterbkp].[ModifiedDate] AS [ModifiedDate], 
+    [atmmasterbkp].[RuleErrorCode] AS [RuleErrorCode], 
+    [atmmasterbkp].[RouteCode] AS [RouteCode], 
+    [atmmasterbkp].[RouteName] AS [RouteName], 
+    [atmmasterbkp].[CBRID] AS [CBRID]
+    FROM [dbo].[atmmasterbkp] AS [atmmasterbkp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="batch_bkp_06042020" EntityType="Self.batch_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [batch_bkp_06042020].[ID] AS [ID], 
+    [batch_bkp_06042020].[BatchID] AS [BatchID], 
+    [batch_bkp_06042020].[Date] AS [Date], 
+    [batch_bkp_06042020].[FromEmail] AS [FromEmail], 
+    [batch_bkp_06042020].[EmailSubject] AS [EmailSubject], 
+    [batch_bkp_06042020].[EmailContentType] AS [EmailContentType], 
+    [batch_bkp_06042020].[EmailBody] AS [EmailBody], 
+    [batch_bkp_06042020].[Link] AS [Link], 
+    [batch_bkp_06042020].[To] AS [To], 
+    [batch_bkp_06042020].[cc] AS [cc], 
+    [batch_bkp_06042020].[EmailIdentifier] AS [EmailIdentifier], 
+    [batch_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [batch_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [batch_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [batch_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [batch_bkp_06042020].[MSP] AS [MSP], 
+    [batch_bkp_06042020].[DownloadPath] AS [DownloadPath], 
+    [batch_bkp_06042020].[message_id] AS [message_id], 
+    [batch_bkp_06042020].[PartialResponseSent] AS [PartialResponseSent], 
+    [batch_bkp_06042020].[FinalResponseSent] AS [FinalResponseSent]
+    FROM [dbo].[batch_bkp_06042020] AS [batch_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="errorcodemaster_bkp24042020" EntityType="Self.errorcodemaster_bkp24042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [errorcodemaster_bkp24042020].[ID] AS [ID], 
+    [errorcodemaster_bkp24042020].[ErrorCode] AS [ErrorCode], 
+    [errorcodemaster_bkp24042020].[Remarks] AS [Remarks], 
+    [errorcodemaster_bkp24042020].[Type] AS [Type], 
+    [errorcodemaster_bkp24042020].[ErrorBucket] AS [ErrorBucket], 
+    [errorcodemaster_bkp24042020].[Category] AS [Category], 
+    [errorcodemaster_bkp24042020].[IsActive] AS [IsActive], 
+    [errorcodemaster_bkp24042020].[CreatedBy] AS [CreatedBy], 
+    [errorcodemaster_bkp24042020].[CreatedOn] AS [CreatedOn], 
+    [errorcodemaster_bkp24042020].[ModifiedBy] AS [ModifiedBy], 
+    [errorcodemaster_bkp24042020].[ModifiedOn] AS [ModifiedOn], 
+    [errorcodemaster_bkp24042020].[Machine_Make] AS [Machine_Make], 
+    [errorcodemaster_bkp24042020].[Module_code] AS [Module_code], 
+    [errorcodemaster_bkp24042020].[Module_Discreption] AS [Module_Discreption], 
+    [errorcodemaster_bkp24042020].[TD_status] AS [TD_status], 
+    [errorcodemaster_bkp24042020].[TD_status_Discreption] AS [TD_status_Discreption], 
+    [errorcodemaster_bkp24042020].[M_status_error] AS [M_status_error], 
+    [errorcodemaster_bkp24042020].[M_status_error_Discreption] AS [M_status_error_Discreption], 
+    [errorcodemaster_bkp24042020].[NextTrans_Flag] AS [NextTrans_Flag]
+    FROM [dbo].[errorcodemaster_bkp24042020] AS [errorcodemaster_bkp24042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="errorcodemasterdistinct_bkp24042020" EntityType="Self.errorcodemasterdistinct_bkp24042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [errorcodemasterdistinct_bkp24042020].[ID] AS [ID], 
+    [errorcodemasterdistinct_bkp24042020].[errorcode] AS [errorcode], 
+    [errorcodemasterdistinct_bkp24042020].[Remarks] AS [Remarks], 
+    [errorcodemasterdistinct_bkp24042020].[Type] AS [Type], 
+    [errorcodemasterdistinct_bkp24042020].[ErrorBucket] AS [ErrorBucket]
+    FROM [dbo].[errorcodemasterdistinct_bkp24042020] AS [errorcodemasterdistinct_bkp24042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ticket_bkp_06042020" EntityType="Self.ticket_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ticket_bkp_06042020].[Id] AS [Id], 
+    [ticket_bkp_06042020].[MSP] AS [MSP], 
+    [ticket_bkp_06042020].[BatchID] AS [BatchID], 
+    [ticket_bkp_06042020].[TicketID] AS [TicketID], 
+    [ticket_bkp_06042020].[Account] AS [Account], 
+    [ticket_bkp_06042020].[Type] AS [Type], 
+    [ticket_bkp_06042020].[QueryType] AS [QueryType], 
+    [ticket_bkp_06042020].[QueryCategory] AS [QueryCategory], 
+    [ticket_bkp_06042020].[EmailID] AS [EmailID], 
+    [ticket_bkp_06042020].[EmailDate] AS [EmailDate], 
+    [ticket_bkp_06042020].[IncidentDate] AS [IncidentDate], 
+    [ticket_bkp_06042020].[ATMID] AS [ATMID], 
+    [ticket_bkp_06042020].[Bank] AS [Bank], 
+    [ticket_bkp_06042020].[Region] AS [Region], 
+    [ticket_bkp_06042020].[Location] AS [Location], 
+    [ticket_bkp_06042020].[HubLocation] AS [HubLocation], 
+    [ticket_bkp_06042020].[DisputedAmount] AS [DisputedAmount], 
+    [ticket_bkp_06042020].[TransactonTime] AS [TransactonTime], 
+    [ticket_bkp_06042020].[TransactionNo] AS [TransactionNo], 
+    [ticket_bkp_06042020].[TransAmount] AS [TransAmount], 
+    [ticket_bkp_06042020].[CardNo] AS [CardNo], 
+    [ticket_bkp_06042020].[ReferenceNo] AS [ReferenceNo], 
+    [ticket_bkp_06042020].[AccountNo] AS [AccountNo], 
+    [ticket_bkp_06042020].[DisputeComments] AS [DisputeComments], 
+    [ticket_bkp_06042020].[UploadFile] AS [UploadFile], 
+    [ticket_bkp_06042020].[EJFilePath] AS [EJFilePath], 
+    [ticket_bkp_06042020].[Status] AS [Status], 
+    [ticket_bkp_06042020].[ErrorCode] AS [ErrorCode], 
+    [ticket_bkp_06042020].[ErrorRemark] AS [ErrorRemark], 
+    [ticket_bkp_06042020].[DisputeRejected] AS [DisputeRejected], 
+    [ticket_bkp_06042020].[Justification] AS [Justification], 
+    [ticket_bkp_06042020].[DepositDate] AS [DepositDate], 
+    [ticket_bkp_06042020].[DepositAmount] AS [DepositAmount], 
+    [ticket_bkp_06042020].[InternalAction] AS [InternalAction], 
+    [ticket_bkp_06042020].[HOComments] AS [HOComments], 
+    [ticket_bkp_06042020].[AssignedTo] AS [AssignedTo], 
+    [ticket_bkp_06042020].[FirstCustodianCode] AS [FirstCustodianCode], 
+    [ticket_bkp_06042020].[FirstCustodianName] AS [FirstCustodianName], 
+    [ticket_bkp_06042020].[SecondCustodianCode] AS [SecondCustodianCode], 
+    [ticket_bkp_06042020].[SecondCustodianName] AS [SecondCustodianName], 
+    [ticket_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [ticket_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [ticket_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [ticket_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [ticket_bkp_06042020].[CustCommentsType] AS [CustCommentsType], 
+    [ticket_bkp_06042020].[CustCommentsBy] AS [CustCommentsBy], 
+    [ticket_bkp_06042020].[CustComments] AS [CustComments], 
+    [ticket_bkp_06042020].[Source] AS [Source], 
+    [ticket_bkp_06042020].[RuleErrorCode] AS [RuleErrorCode], 
+    [ticket_bkp_06042020].[CMSStatus] AS [CMSStatus], 
+    [ticket_bkp_06042020].[CustStatus] AS [CustStatus], 
+    [ticket_bkp_06042020].[OldTicketId] AS [OldTicketId], 
+    [ticket_bkp_06042020].[TargetAmount] AS [TargetAmount], 
+    [ticket_bkp_06042020].[RecoveredAmount] AS [RecoveredAmount], 
+    [ticket_bkp_06042020].[TicketAttRefId] AS [TicketAttRefId], 
+    [ticket_bkp_06042020].[IsAtmExist] AS [IsAtmExist], 
+    [ticket_bkp_06042020].[ShortageFromDate] AS [ShortageFromDate], 
+    [ticket_bkp_06042020].[HoOwner] AS [HoOwner], 
+    [ticket_bkp_06042020].[LocOwner] AS [LocOwner], 
+    [ticket_bkp_06042020].[ProcessingRemarks] AS [ProcessingRemarks], 
+    [ticket_bkp_06042020].[ATMpkid] AS [ATMpkid], 
+    [ticket_bkp_06042020].[HOInitialAssignedDT] AS [HOInitialAssignedDT], 
+    [ticket_bkp_06042020].[HOSubmitted] AS [HOSubmitted], 
+    [ticket_bkp_06042020].[AssignedToLocationDT] AS [AssignedToLocationDT], 
+    [ticket_bkp_06042020].[LocSubmitted] AS [LocSubmitted], 
+    [ticket_bkp_06042020].[LocationCompletionDT] AS [LocationCompletionDT], 
+    [ticket_bkp_06042020].[AlternateCardNo] AS [AlternateCardNo], 
+    [ticket_bkp_06042020].[LastEOD] AS [LastEOD], 
+    [ticket_bkp_06042020].[FirstEOD] AS [FirstEOD], 
+    [ticket_bkp_06042020].[WOORDERNo] AS [WOORDERNo]
+    FROM [dbo].[ticket_bkp_06042020] AS [ticket_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ticket_bkp_08032020" EntityType="Self.ticket_bkp_08032020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ticket_bkp_08032020].[Id] AS [Id], 
+    [ticket_bkp_08032020].[MSP] AS [MSP], 
+    [ticket_bkp_08032020].[BatchID] AS [BatchID], 
+    [ticket_bkp_08032020].[TicketID] AS [TicketID], 
+    [ticket_bkp_08032020].[Account] AS [Account], 
+    [ticket_bkp_08032020].[Type] AS [Type], 
+    [ticket_bkp_08032020].[QueryType] AS [QueryType], 
+    [ticket_bkp_08032020].[QueryCategory] AS [QueryCategory], 
+    [ticket_bkp_08032020].[EmailID] AS [EmailID], 
+    [ticket_bkp_08032020].[EmailDate] AS [EmailDate], 
+    [ticket_bkp_08032020].[IncidentDate] AS [IncidentDate], 
+    [ticket_bkp_08032020].[ATMID] AS [ATMID], 
+    [ticket_bkp_08032020].[Bank] AS [Bank], 
+    [ticket_bkp_08032020].[Region] AS [Region], 
+    [ticket_bkp_08032020].[Location] AS [Location], 
+    [ticket_bkp_08032020].[HubLocation] AS [HubLocation], 
+    [ticket_bkp_08032020].[DisputedAmount] AS [DisputedAmount], 
+    [ticket_bkp_08032020].[TransactonTime] AS [TransactonTime], 
+    [ticket_bkp_08032020].[TransactionNo] AS [TransactionNo], 
+    [ticket_bkp_08032020].[TransAmount] AS [TransAmount], 
+    [ticket_bkp_08032020].[CardNo] AS [CardNo], 
+    [ticket_bkp_08032020].[ReferenceNo] AS [ReferenceNo], 
+    [ticket_bkp_08032020].[AccountNo] AS [AccountNo], 
+    [ticket_bkp_08032020].[DisputeComments] AS [DisputeComments], 
+    [ticket_bkp_08032020].[UploadFile] AS [UploadFile], 
+    [ticket_bkp_08032020].[EJFilePath] AS [EJFilePath], 
+    [ticket_bkp_08032020].[Status] AS [Status], 
+    [ticket_bkp_08032020].[ErrorCode] AS [ErrorCode], 
+    [ticket_bkp_08032020].[ErrorRemark] AS [ErrorRemark], 
+    [ticket_bkp_08032020].[DisputeRejected] AS [DisputeRejected], 
+    [ticket_bkp_08032020].[Justification] AS [Justification], 
+    [ticket_bkp_08032020].[DepositDate] AS [DepositDate], 
+    [ticket_bkp_08032020].[DepositAmount] AS [DepositAmount], 
+    [ticket_bkp_08032020].[InternalAction] AS [InternalAction], 
+    [ticket_bkp_08032020].[HOComments] AS [HOComments], 
+    [ticket_bkp_08032020].[AssignedTo] AS [AssignedTo], 
+    [ticket_bkp_08032020].[FirstCustodianCode] AS [FirstCustodianCode], 
+    [ticket_bkp_08032020].[FirstCustodianName] AS [FirstCustodianName], 
+    [ticket_bkp_08032020].[SecondCustodianCode] AS [SecondCustodianCode], 
+    [ticket_bkp_08032020].[SecondCustodianName] AS [SecondCustodianName], 
+    [ticket_bkp_08032020].[CreatedBy] AS [CreatedBy], 
+    [ticket_bkp_08032020].[CreatedDate] AS [CreatedDate], 
+    [ticket_bkp_08032020].[ModifiedBy] AS [ModifiedBy], 
+    [ticket_bkp_08032020].[ModifiedDate] AS [ModifiedDate], 
+    [ticket_bkp_08032020].[CustCommentsType] AS [CustCommentsType], 
+    [ticket_bkp_08032020].[CustCommentsBy] AS [CustCommentsBy], 
+    [ticket_bkp_08032020].[CustComments] AS [CustComments], 
+    [ticket_bkp_08032020].[Source] AS [Source], 
+    [ticket_bkp_08032020].[RuleErrorCode] AS [RuleErrorCode], 
+    [ticket_bkp_08032020].[CMSStatus] AS [CMSStatus], 
+    [ticket_bkp_08032020].[CustStatus] AS [CustStatus], 
+    [ticket_bkp_08032020].[OldTicketId] AS [OldTicketId], 
+    [ticket_bkp_08032020].[TargetAmount] AS [TargetAmount], 
+    [ticket_bkp_08032020].[RecoveredAmount] AS [RecoveredAmount], 
+    [ticket_bkp_08032020].[TicketAttRefId] AS [TicketAttRefId], 
+    [ticket_bkp_08032020].[IsAtmExist] AS [IsAtmExist], 
+    [ticket_bkp_08032020].[ShortageFromDate] AS [ShortageFromDate], 
+    [ticket_bkp_08032020].[HoOwner] AS [HoOwner], 
+    [ticket_bkp_08032020].[LocOwner] AS [LocOwner], 
+    [ticket_bkp_08032020].[ProcessingRemarks] AS [ProcessingRemarks], 
+    [ticket_bkp_08032020].[ATMpkid] AS [ATMpkid], 
+    [ticket_bkp_08032020].[HOInitialAssignedDT] AS [HOInitialAssignedDT], 
+    [ticket_bkp_08032020].[HOSubmitted] AS [HOSubmitted], 
+    [ticket_bkp_08032020].[AssignedToLocationDT] AS [AssignedToLocationDT], 
+    [ticket_bkp_08032020].[LocSubmitted] AS [LocSubmitted], 
+    [ticket_bkp_08032020].[LocationCompletionDT] AS [LocationCompletionDT], 
+    [ticket_bkp_08032020].[AlternateCardNo] AS [AlternateCardNo]
+    FROM [dbo].[ticket_bkp_08032020] AS [ticket_bkp_08032020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ticket_dup_bkp_06042020" EntityType="Self.ticket_dup_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ticket_dup_bkp_06042020].[Id] AS [Id], 
+    [ticket_dup_bkp_06042020].[MSP] AS [MSP], 
+    [ticket_dup_bkp_06042020].[BatchID] AS [BatchID], 
+    [ticket_dup_bkp_06042020].[TicketID] AS [TicketID], 
+    [ticket_dup_bkp_06042020].[Account] AS [Account], 
+    [ticket_dup_bkp_06042020].[Type] AS [Type], 
+    [ticket_dup_bkp_06042020].[QueryType] AS [QueryType], 
+    [ticket_dup_bkp_06042020].[QueryCategory] AS [QueryCategory], 
+    [ticket_dup_bkp_06042020].[EmailID] AS [EmailID], 
+    [ticket_dup_bkp_06042020].[EmailDate] AS [EmailDate], 
+    [ticket_dup_bkp_06042020].[IncidentDate] AS [IncidentDate], 
+    [ticket_dup_bkp_06042020].[ATMID] AS [ATMID], 
+    [ticket_dup_bkp_06042020].[Bank] AS [Bank], 
+    [ticket_dup_bkp_06042020].[Region] AS [Region], 
+    [ticket_dup_bkp_06042020].[Location] AS [Location], 
+    [ticket_dup_bkp_06042020].[HubLocation] AS [HubLocation], 
+    [ticket_dup_bkp_06042020].[DisputedAmount] AS [DisputedAmount], 
+    [ticket_dup_bkp_06042020].[TransactonTime] AS [TransactonTime], 
+    [ticket_dup_bkp_06042020].[TransactionNo] AS [TransactionNo], 
+    [ticket_dup_bkp_06042020].[TransAmount] AS [TransAmount], 
+    [ticket_dup_bkp_06042020].[CardNo] AS [CardNo], 
+    [ticket_dup_bkp_06042020].[ReferenceNo] AS [ReferenceNo], 
+    [ticket_dup_bkp_06042020].[AccountNo] AS [AccountNo], 
+    [ticket_dup_bkp_06042020].[DisputeComments] AS [DisputeComments], 
+    [ticket_dup_bkp_06042020].[UploadFile] AS [UploadFile], 
+    [ticket_dup_bkp_06042020].[EJFilePath] AS [EJFilePath], 
+    [ticket_dup_bkp_06042020].[Status] AS [Status], 
+    [ticket_dup_bkp_06042020].[ErrorCode] AS [ErrorCode], 
+    [ticket_dup_bkp_06042020].[ErrorRemark] AS [ErrorRemark], 
+    [ticket_dup_bkp_06042020].[DisputeRejected] AS [DisputeRejected], 
+    [ticket_dup_bkp_06042020].[Justification] AS [Justification], 
+    [ticket_dup_bkp_06042020].[DepositDate] AS [DepositDate], 
+    [ticket_dup_bkp_06042020].[DepositAmount] AS [DepositAmount], 
+    [ticket_dup_bkp_06042020].[InternalAction] AS [InternalAction], 
+    [ticket_dup_bkp_06042020].[HOComments] AS [HOComments], 
+    [ticket_dup_bkp_06042020].[AssignedTo] AS [AssignedTo], 
+    [ticket_dup_bkp_06042020].[FirstCustodianCode] AS [FirstCustodianCode], 
+    [ticket_dup_bkp_06042020].[FirstCustodianName] AS [FirstCustodianName], 
+    [ticket_dup_bkp_06042020].[SecondCustodianCode] AS [SecondCustodianCode], 
+    [ticket_dup_bkp_06042020].[SecondCustodianName] AS [SecondCustodianName], 
+    [ticket_dup_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [ticket_dup_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [ticket_dup_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [ticket_dup_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [ticket_dup_bkp_06042020].[CustCommentsType] AS [CustCommentsType], 
+    [ticket_dup_bkp_06042020].[CustCommentsBy] AS [CustCommentsBy], 
+    [ticket_dup_bkp_06042020].[CustComments] AS [CustComments], 
+    [ticket_dup_bkp_06042020].[Source] AS [Source], 
+    [ticket_dup_bkp_06042020].[RuleErrorCode] AS [RuleErrorCode], 
+    [ticket_dup_bkp_06042020].[CMSStatus] AS [CMSStatus], 
+    [ticket_dup_bkp_06042020].[CustStatus] AS [CustStatus], 
+    [ticket_dup_bkp_06042020].[OldTicketId] AS [OldTicketId], 
+    [ticket_dup_bkp_06042020].[TargetAmount] AS [TargetAmount], 
+    [ticket_dup_bkp_06042020].[RecoveredAmount] AS [RecoveredAmount], 
+    [ticket_dup_bkp_06042020].[TicketAttRefId] AS [TicketAttRefId], 
+    [ticket_dup_bkp_06042020].[IsAtmExist] AS [IsAtmExist], 
+    [ticket_dup_bkp_06042020].[ShortageFromDate] AS [ShortageFromDate], 
+    [ticket_dup_bkp_06042020].[HoOwner] AS [HoOwner], 
+    [ticket_dup_bkp_06042020].[LocOwner] AS [LocOwner], 
+    [ticket_dup_bkp_06042020].[ProcessingRemarks] AS [ProcessingRemarks], 
+    [ticket_dup_bkp_06042020].[ATMpkid] AS [ATMpkid], 
+    [ticket_dup_bkp_06042020].[HOInitialAssignedDT] AS [HOInitialAssignedDT], 
+    [ticket_dup_bkp_06042020].[HOSubmitted] AS [HOSubmitted], 
+    [ticket_dup_bkp_06042020].[AssignedToLocationDT] AS [AssignedToLocationDT], 
+    [ticket_dup_bkp_06042020].[LocSubmitted] AS [LocSubmitted], 
+    [ticket_dup_bkp_06042020].[LocationCompletionDT] AS [LocationCompletionDT], 
+    [ticket_dup_bkp_06042020].[AlternateCardNo] AS [AlternateCardNo]
+    FROM [dbo].[ticket_dup_bkp_06042020] AS [ticket_dup_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ticketattachments_bkp_06042020" EntityType="Self.ticketattachments_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ticketattachments_bkp_06042020].[Id] AS [Id], 
+    [ticketattachments_bkp_06042020].[TicketId] AS [TicketId], 
+    [ticketattachments_bkp_06042020].[VisibleToMSP] AS [VisibleToMSP], 
+    [ticketattachments_bkp_06042020].[VisibleToHO] AS [VisibleToHO], 
+    [ticketattachments_bkp_06042020].[VisibleToLocation] AS [VisibleToLocation], 
+    [ticketattachments_bkp_06042020].[TypeOfAttachment] AS [TypeOfAttachment], 
+    [ticketattachments_bkp_06042020].[FilePath] AS [FilePath], 
+    [ticketattachments_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [ticketattachments_bkp_06042020].[CreatedOn] AS [CreatedOn], 
+    [ticketattachments_bkp_06042020].[EmailSentTime] AS [EmailSentTime], 
+    [ticketattachments_bkp_06042020].[EmailType] AS [EmailType]
+    FROM [dbo].[ticketattachments_bkp_06042020] AS [ticketattachments_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ticketlog_bkp_06042020" EntityType="Self.ticketlog_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ticketlog_bkp_06042020].[ID] AS [ID], 
+    [ticketlog_bkp_06042020].[MSP] AS [MSP], 
+    [ticketlog_bkp_06042020].[BatchID] AS [BatchID], 
+    [ticketlog_bkp_06042020].[TicketID] AS [TicketID], 
+    [ticketlog_bkp_06042020].[Status] AS [Status], 
+    [ticketlog_bkp_06042020].[DisputeRejected] AS [DisputeRejected], 
+    [ticketlog_bkp_06042020].[Justification] AS [Justification], 
+    [ticketlog_bkp_06042020].[InternalAction] AS [InternalAction], 
+    [ticketlog_bkp_06042020].[UploadedFileName] AS [UploadedFileName], 
+    [ticketlog_bkp_06042020].[UploadedFile] AS [UploadedFile], 
+    [ticketlog_bkp_06042020].[CustCommentsType] AS [CustCommentsType], 
+    [ticketlog_bkp_06042020].[CustCommentsBy] AS [CustCommentsBy], 
+    [ticketlog_bkp_06042020].[CustComments] AS [CustComments], 
+    [ticketlog_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [ticketlog_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [ticketlog_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [ticketlog_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [ticketlog_bkp_06042020].[AssignedTo] AS [AssignedTo], 
+    [ticketlog_bkp_06042020].[Source] AS [Source]
+    FROM [dbo].[ticketlog_bkp_06042020] AS [ticketlog_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="utilization_data_bkp_06042020" EntityType="Self.utilization_data_bkp_06042020" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [utilization_data_bkp_06042020].[ID] AS [ID], 
+    [utilization_data_bkp_06042020].[MSP] AS [MSP], 
+    [utilization_data_bkp_06042020].[BatchID] AS [BatchID], 
+    [utilization_data_bkp_06042020].[TicketID] AS [TicketID], 
+    [utilization_data_bkp_06042020].[CBRID] AS [CBRID], 
+    [utilization_data_bkp_06042020].[ATMID] AS [ATMID], 
+    [utilization_data_bkp_06042020].[EOD_Date] AS [EOD_Date], 
+    [utilization_data_bkp_06042020].[Overage] AS [Overage], 
+    [utilization_data_bkp_06042020].[Overage_Usage] AS [Overage_Usage], 
+    [utilization_data_bkp_06042020].[Overage_Balance] AS [Overage_Balance], 
+    [utilization_data_bkp_06042020].[Mid_cash] AS [Mid_cash], 
+    [utilization_data_bkp_06042020].[Mid_cash_Usage] AS [Mid_cash_Usage], 
+    [utilization_data_bkp_06042020].[Mid_Cash_Balance] AS [Mid_Cash_Balance], 
+    [utilization_data_bkp_06042020].[CreatedBy] AS [CreatedBy], 
+    [utilization_data_bkp_06042020].[CreatedDate] AS [CreatedDate], 
+    [utilization_data_bkp_06042020].[ModifiedBy] AS [ModifiedBy], 
+    [utilization_data_bkp_06042020].[ModifiedDate] AS [ModifiedDate], 
+    [utilization_data_bkp_06042020].[ATM_Deposit] AS [ATM_Deposit], 
+    [utilization_data_bkp_06042020].[ATM_Usage] AS [ATM_Usage], 
+    [utilization_data_bkp_06042020].[ATM_Balance] AS [ATM_Balance]
+    FROM [dbo].[utilization_data_bkp_06042020] AS [utilization_data_bkp_06042020]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RMSAutomation_UATModel1StoreContainer" CdmEntityContainer="RMSAutomation_UATEntities2">
+    <EntitySetMapping Name="apilogs">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.apilog">
+        <MappingFragment StoreEntitySet="apilog">
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="RequestContentType" ColumnName="RequestContentType" />
+          <ScalarProperty Name="RequestContent" ColumnName="RequestContent" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="RequestMethod" ColumnName="RequestMethod" />
+          <ScalarProperty Name="RequestTimestamp" ColumnName="RequestTimestamp" />
+          <ScalarProperty Name="ResponseContentType" ColumnName="ResponseContentType" />
+          <ScalarProperty Name="ResponseContent" ColumnName="ResponseContent" />
+          <ScalarProperty Name="ResponseStatusCode" ColumnName="ResponseStatusCode" />
+          <ScalarProperty Name="ResponseTimestamp" ColumnName="ResponseTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="atmmasters">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.atmmaster">
+        <MappingFragment StoreEntitySet="atmmaster">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="atmid" ColumnName="atmid" />
+          <ScalarProperty Name="atmcode" ColumnName="atmcode" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="RoCode" ColumnName="RoCode" />
+          <ScalarProperty Name="RoName" ColumnName="RoName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="HubLocationCode" ColumnName="HubLocationCode" />
+          <ScalarProperty Name="HubLocationName" ColumnName="HubLocationName" />
+          <ScalarProperty Name="SubLocationCode" ColumnName="SubLocationCode" />
+          <ScalarProperty Name="SubLocationName" ColumnName="SubLocationName" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TakeOverDate" ColumnName="TakeOverDate" />
+          <ScalarProperty Name="HandOverDate" ColumnName="HandOverDate" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="AtmType" ColumnName="AtmType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+          <ScalarProperty Name="RouteName" ColumnName="RouteName" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="batches">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.batch">
+        <MappingFragment StoreEntitySet="batch">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="EmailContentType" ColumnName="EmailContentType" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="EmailIdentifier" ColumnName="EmailIdentifier" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="DownloadPath" ColumnName="DownloadPath" />
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="PartialResponseSent" ColumnName="PartialResponseSent" />
+          <ScalarProperty Name="FinalResponseSent" ColumnName="FinalResponseSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="batchresponses">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.batchresponse">
+        <MappingFragment StoreEntitySet="batchresponse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="CompleteBatchResponse" ColumnName="CompleteBatchResponse" />
+          <ScalarProperty Name="ResponseFilePath" ColumnName="ResponseFilePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CassetteMasters">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.CassetteMaster">
+        <MappingFragment StoreEntitySet="CassetteMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Type1" ColumnName="Type1" />
+          <ScalarProperty Name="Type2" ColumnName="Type2" />
+          <ScalarProperty Name="Type3" ColumnName="Type3" />
+          <ScalarProperty Name="Type4" ColumnName="Type4" />
+          <ScalarProperty Name="Type5" ColumnName="Type5" />
+          <ScalarProperty Name="MixType1" ColumnName="MixType1" />
+          <ScalarProperty Name="MixType2" ColumnName="MixType2" />
+          <ScalarProperty Name="MixType3" ColumnName="MixType3" />
+          <ScalarProperty Name="MixType4" ColumnName="MixType4" />
+          <ScalarProperty Name="MixType5" ColumnName="MixType5" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailDatas">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.EmailData">
+        <MappingFragment StoreEntitySet="EmailData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="IsProcessed" ColumnName="IsProcessed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type_EmpCode" ColumnName="Type_EmpCode" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="RightsCode" ColumnName="RightsCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_hierarchy">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.employee_hierarchy">
+        <MappingFragment StoreEntitySet="employee_hierarchy">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="Region_Code" ColumnName="Region_Code" />
+          <ScalarProperty Name="Loc_Code" ColumnName="Loc_Code" />
+          <ScalarProperty Name="Sub_Location_Code" ColumnName="Sub_Location_Code" />
+          <ScalarProperty Name="Hub_Location_Code" ColumnName="Hub_Location_Code" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employee_role">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.employee_role">
+        <MappingFragment StoreEntitySet="employee_role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TypeCode" ColumnName="TypeCode" />
+          <ScalarProperty Name="Type_EmpCode" ColumnName="Type_EmpCode" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="RightsCode" ColumnName="RightsCode" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EncryptOtp" ColumnName="EncryptOtp" />
+          <ScalarProperty Name="PassChangeFlag" ColumnName="PassChangeFlag" />
+          <ScalarProperty Name="UserNotAllocation" ColumnName="UserNotAllocation" />
+          <ScalarProperty Name="MspCategory" ColumnName="MspCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorcodemasters">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.errorcodemaster">
+        <MappingFragment StoreEntitySet="errorcodemaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ErrorBucket" ColumnName="ErrorBucket" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Machine_Make" ColumnName="Machine_Make" />
+          <ScalarProperty Name="Module_code" ColumnName="Module_code" />
+          <ScalarProperty Name="Module_Discreption" ColumnName="Module_Discreption" />
+          <ScalarProperty Name="TD_status" ColumnName="TD_status" />
+          <ScalarProperty Name="TD_status_Discreption" ColumnName="TD_status_Discreption" />
+          <ScalarProperty Name="M_status_error" ColumnName="M_status_error" />
+          <ScalarProperty Name="M_status_error_Discreption" ColumnName="M_status_error_Discreption" />
+          <ScalarProperty Name="NextTrans_Flag" ColumnName="NextTrans_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorcodemasterdistincts">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.errorcodemasterdistinct">
+        <MappingFragment StoreEntitySet="errorcodemasterdistinct">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="errorcode" ColumnName="errorcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ErrorBucket" ColumnName="ErrorBucket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorrolemappings">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.errorrolemapping">
+        <MappingFragment StoreEntitySet="errorrolemapping">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="masters">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.master">
+        <MappingFragment StoreEntitySet="master">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mspconfigurations">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.mspconfiguration">
+        <MappingFragment StoreEntitySet="mspconfiguration">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+          <ScalarProperty Name="MSPName" ColumnName="MSPName" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ImageLogo" ColumnName="ImageLogo" />
+          <ScalarProperty Name="NoExcessCertificateReq" ColumnName="NoExcessCertificateReq" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="oldrmstickets">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.oldrmsticket">
+        <MappingFragment StoreEntitySet="oldrmstickets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="accountname" ColumnName="accountname" />
+          <ScalarProperty Name="atmid" ColumnName="atmid" />
+          <ScalarProperty Name="cardno" ColumnName="cardno" />
+          <ScalarProperty Name="DispDate" ColumnName="DispDate" />
+          <ScalarProperty Name="DisputeAmt" ColumnName="DisputeAmt" />
+          <ScalarProperty Name="RecoveredAmt" ColumnName="RecoveredAmt" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="TargetAmt" ColumnName="TargetAmt" />
+          <ScalarProperty Name="TranDate" ColumnName="TranDate" />
+          <ScalarProperty Name="TranNo" ColumnName="TranNo" />
+          <ScalarProperty Name="cmsstatus" ColumnName="cmsstatus" />
+          <ScalarProperty Name="custstatus" ColumnName="custstatus" />
+          <ScalarProperty Name="errorcode" ColumnName="errorcode" />
+          <ScalarProperty Name="feasibleid" ColumnName="feasibleid" />
+          <ScalarProperty Name="territorystatus" ColumnName="territorystatus" />
+          <ScalarProperty Name="pendingamount" ColumnName="pendingamount" />
+          <ScalarProperty Name="querycategory" ColumnName="querycategory" />
+          <ScalarProperty Name="atmtype" ColumnName="atmtype" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="typecode" ColumnName="typecode" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="physical_shortage_temp">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.physical_shortage_temp">
+        <MappingFragment StoreEntitySet="physical_shortage_temp">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="EODDATETIME" ColumnName="EODDATETIME" />
+          <ScalarProperty Name="EODDATE" ColumnName="EODDATE" />
+          <ScalarProperty Name="TRANTIME" ColumnName="TRANTIME" />
+          <ScalarProperty Name="Overage_Total" ColumnName="Overage_Total" />
+          <ScalarProperty Name="Shortage_Total" ColumnName="Shortage_Total" />
+          <ScalarProperty Name="Overage_2000" ColumnName="Overage_2000" />
+          <ScalarProperty Name="Overage_500" ColumnName="Overage_500" />
+          <ScalarProperty Name="Overage_200" ColumnName="Overage_200" />
+          <ScalarProperty Name="Overage_100" ColumnName="Overage_100" />
+          <ScalarProperty Name="Overage_50" ColumnName="Overage_50" />
+          <ScalarProperty Name="Shortage_2000" ColumnName="Shortage_2000" />
+          <ScalarProperty Name="Shortage_500" ColumnName="Shortage_500" />
+          <ScalarProperty Name="Shortage_200" ColumnName="Shortage_200" />
+          <ScalarProperty Name="Shortage_10" ColumnName="Shortage_10" />
+          <ScalarProperty Name="Shortage_50" ColumnName="Shortage_50" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recoveries">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.recovery">
+        <MappingFragment StoreEntitySet="recovery">
+          <ScalarProperty Name="RecoveryId" ColumnName="RecoveryId" />
+          <ScalarProperty Name="RecoveryNo" ColumnName="RecoveryNo" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="RefTicketId" ColumnName="RefTicketId" />
+          <ScalarProperty Name="RecoveryFromEmpId" ColumnName="RecoveryFromEmpId" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="RecoveryAmount" ColumnName="RecoveryAmount" />
+          <ScalarProperty Name="ReceivedAmount" ColumnName="ReceivedAmount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RecoveryAssignedTo" ColumnName="RecoveryAssignedTo" />
+          <ScalarProperty Name="LocationSubmitted" ColumnName="LocationSubmitted" />
+          <ScalarProperty Name="MisSubmitted" ColumnName="MisSubmitted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recoverycollections">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.recoverycollection">
+        <MappingFragment StoreEntitySet="recoverycollection">
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="CollectionNumber" ColumnName="CollectionNumber" />
+          <ScalarProperty Name="RecoveryNumber" ColumnName="RecoveryNumber" />
+          <ScalarProperty Name="RecoveryAmount" ColumnName="RecoveryAmount" />
+          <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+          <ScalarProperty Name="ReceivedAmount" ColumnName="ReceivedAmount" />
+          <ScalarProperty Name="TransactionMode" ColumnName="TransactionMode" />
+          <ScalarProperty Name="TransactionNumber" ColumnName="TransactionNumber" />
+          <ScalarProperty Name="TransDetails" ColumnName="TransDetails" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="OwnerOfCollection" ColumnName="OwnerOfCollection" />
+          <ScalarProperty Name="CreationComments" ColumnName="CreationComments" />
+          <ScalarProperty Name="ApproverComments" ColumnName="ApproverComments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="runruleenginelogs">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.runruleenginelog">
+        <MappingFragment StoreEntitySet="runruleenginelogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="RanRuleEngineWeb" ColumnName="RanRuleEngineWeb" />
+          <ScalarProperty Name="RanRuleEngineWebDate" ColumnName="RanRuleEngineWebDate" />
+          <ScalarProperty Name="RuleEngineRemarks" ColumnName="RuleEngineRemarks" />
+          <ScalarProperty Name="RuleEngineInitiator" ColumnName="RuleEngineInitiator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusChangeManuals">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.StatusChangeManual">
+        <MappingFragment StoreEntitySet="StatusChangeManual">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SrNo" ColumnName="SrNo" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="OldStatus" ColumnName="OldStatus" />
+          <ScalarProperty Name="NewStatus" ColumnName="NewStatus" />
+          <ScalarProperty Name="OldCMSStatus" ColumnName="OldCMSStatus" />
+          <ScalarProperty Name="NewCMSStatus" ColumnName="NewCMSStatus" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticket">
+        <MappingFragment StoreEntitySet="ticket">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="QueryCategory" ColumnName="QueryCategory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="HubLocation" ColumnName="HubLocation" />
+          <ScalarProperty Name="DisputedAmount" ColumnName="DisputedAmount" />
+          <ScalarProperty Name="TransactonTime" ColumnName="TransactonTime" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DisputeComments" ColumnName="DisputeComments" />
+          <ScalarProperty Name="UploadFile" ColumnName="UploadFile" />
+          <ScalarProperty Name="EJFilePath" ColumnName="EJFilePath" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorRemark" ColumnName="ErrorRemark" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="DepositAmount" ColumnName="DepositAmount" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="HOComments" ColumnName="HOComments" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="FirstCustodianCode" ColumnName="FirstCustodianCode" />
+          <ScalarProperty Name="FirstCustodianName" ColumnName="FirstCustodianName" />
+          <ScalarProperty Name="SecondCustodianCode" ColumnName="SecondCustodianCode" />
+          <ScalarProperty Name="SecondCustodianName" ColumnName="SecondCustodianName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CustStatus" ColumnName="CustStatus" />
+          <ScalarProperty Name="OldTicketId" ColumnName="OldTicketId" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="RecoveredAmount" ColumnName="RecoveredAmount" />
+          <ScalarProperty Name="TicketAttRefId" ColumnName="TicketAttRefId" />
+          <ScalarProperty Name="IsAtmExist" ColumnName="IsAtmExist" />
+          <ScalarProperty Name="ShortageFromDate" ColumnName="ShortageFromDate" />
+          <ScalarProperty Name="HoOwner" ColumnName="HoOwner" />
+          <ScalarProperty Name="LocOwner" ColumnName="LocOwner" />
+          <ScalarProperty Name="ProcessingRemarks" ColumnName="ProcessingRemarks" />
+          <ScalarProperty Name="ATMpkid" ColumnName="ATMpkid" />
+          <ScalarProperty Name="HOInitialAssignedDT" ColumnName="HOInitialAssignedDT" />
+          <ScalarProperty Name="HOSubmitted" ColumnName="HOSubmitted" />
+          <ScalarProperty Name="AssignedToLocationDT" ColumnName="AssignedToLocationDT" />
+          <ScalarProperty Name="LocSubmitted" ColumnName="LocSubmitted" />
+          <ScalarProperty Name="LocationCompletionDT" ColumnName="LocationCompletionDT" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+          <ScalarProperty Name="LastEOD" ColumnName="LastEOD" />
+          <ScalarProperty Name="FirstEOD" ColumnName="FirstEOD" />
+          <ScalarProperty Name="WOORDERNo" ColumnName="WOORDERNo" />
+          <ScalarProperty Name="RunRuleEngine" ColumnName="RunRuleEngine" />
+          <ScalarProperty Name="JVHAmount" ColumnName="JVHAmount" />
+          <ScalarProperty Name="TerritoryJustification" ColumnName="TerritoryJustification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket_CounterData">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.Ticket_CounterData">
+        <MappingFragment StoreEntitySet="Ticket_CounterData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="EODDate" ColumnName="EODDate" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="CountertType" ColumnName="CountertType" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="Deno50" ColumnName="Deno50" />
+          <ScalarProperty Name="Deno100" ColumnName="Deno100" />
+          <ScalarProperty Name="Deno200" ColumnName="Deno200" />
+          <ScalarProperty Name="Deno500" ColumnName="Deno500" />
+          <ScalarProperty Name="Deno1000" ColumnName="Deno1000" />
+          <ScalarProperty Name="Deno2000" ColumnName="Deno2000" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticket_DUP">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticket_DUP">
+        <MappingFragment StoreEntitySet="ticket_DUP">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="QueryCategory" ColumnName="QueryCategory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="HubLocation" ColumnName="HubLocation" />
+          <ScalarProperty Name="DisputedAmount" ColumnName="DisputedAmount" />
+          <ScalarProperty Name="TransactonTime" ColumnName="TransactonTime" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DisputeComments" ColumnName="DisputeComments" />
+          <ScalarProperty Name="UploadFile" ColumnName="UploadFile" />
+          <ScalarProperty Name="EJFilePath" ColumnName="EJFilePath" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorRemark" ColumnName="ErrorRemark" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="DepositAmount" ColumnName="DepositAmount" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="HOComments" ColumnName="HOComments" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="FirstCustodianCode" ColumnName="FirstCustodianCode" />
+          <ScalarProperty Name="FirstCustodianName" ColumnName="FirstCustodianName" />
+          <ScalarProperty Name="SecondCustodianCode" ColumnName="SecondCustodianCode" />
+          <ScalarProperty Name="SecondCustodianName" ColumnName="SecondCustodianName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CustStatus" ColumnName="CustStatus" />
+          <ScalarProperty Name="OldTicketId" ColumnName="OldTicketId" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="RecoveredAmount" ColumnName="RecoveredAmount" />
+          <ScalarProperty Name="TicketAttRefId" ColumnName="TicketAttRefId" />
+          <ScalarProperty Name="IsAtmExist" ColumnName="IsAtmExist" />
+          <ScalarProperty Name="ShortageFromDate" ColumnName="ShortageFromDate" />
+          <ScalarProperty Name="HoOwner" ColumnName="HoOwner" />
+          <ScalarProperty Name="LocOwner" ColumnName="LocOwner" />
+          <ScalarProperty Name="ProcessingRemarks" ColumnName="ProcessingRemarks" />
+          <ScalarProperty Name="ATMpkid" ColumnName="ATMpkid" />
+          <ScalarProperty Name="HOInitialAssignedDT" ColumnName="HOInitialAssignedDT" />
+          <ScalarProperty Name="HOSubmitted" ColumnName="HOSubmitted" />
+          <ScalarProperty Name="AssignedToLocationDT" ColumnName="AssignedToLocationDT" />
+          <ScalarProperty Name="LocSubmitted" ColumnName="LocSubmitted" />
+          <ScalarProperty Name="LocationCompletionDT" ColumnName="LocationCompletionDT" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketattachments">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticketattachment">
+        <MappingFragment StoreEntitySet="ticketattachments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="VisibleToMSP" ColumnName="VisibleToMSP" />
+          <ScalarProperty Name="VisibleToHO" ColumnName="VisibleToHO" />
+          <ScalarProperty Name="VisibleToLocation" ColumnName="VisibleToLocation" />
+          <ScalarProperty Name="TypeOfAttachment" ColumnName="TypeOfAttachment" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EmailSentTime" ColumnName="EmailSentTime" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketlogs">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticketlog">
+        <MappingFragment StoreEntitySet="ticketlog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="UploadedFileName" ColumnName="UploadedFileName" />
+          <ScalarProperty Name="UploadedFile" ColumnName="UploadedFile" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userloginhistories">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.userloginhistory">
+        <MappingFragment StoreEntitySet="userloginhistory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="LoginFrom" ColumnName="LoginFrom" />
+          <ScalarProperty Name="LoginTo" ColumnName="LoginTo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilization_data">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.utilization_data">
+        <MappingFragment StoreEntitySet="utilization_data">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="EOD_Date" ColumnName="EOD_Date" />
+          <ScalarProperty Name="Overage" ColumnName="Overage" />
+          <ScalarProperty Name="Overage_Usage" ColumnName="Overage_Usage" />
+          <ScalarProperty Name="Overage_Balance" ColumnName="Overage_Balance" />
+          <ScalarProperty Name="Mid_cash" ColumnName="Mid_cash" />
+          <ScalarProperty Name="Mid_cash_Usage" ColumnName="Mid_cash_Usage" />
+          <ScalarProperty Name="Mid_Cash_Balance" ColumnName="Mid_Cash_Balance" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ATM_Deposit" ColumnName="ATM_Deposit" />
+          <ScalarProperty Name="ATM_Usage" ColumnName="ATM_Usage" />
+          <ScalarProperty Name="ATM_Balance" ColumnName="ATM_Balance" />
+          <ScalarProperty Name="Overage_1" ColumnName="Overage_1" />
+          <ScalarProperty Name="Overage_1_usage" ColumnName="Overage_1_usage" />
+          <ScalarProperty Name="Overage_2" ColumnName="Overage_2" />
+          <ScalarProperty Name="Overage_1_balance" ColumnName="Overage_1_balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilization_data_logs">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.utilization_data_logs">
+        <MappingFragment StoreEntitySet="utilization_data_logs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="EOD_Date" ColumnName="EOD_Date" />
+          <ScalarProperty Name="Overage" ColumnName="Overage" />
+          <ScalarProperty Name="Overage_Usage" ColumnName="Overage_Usage" />
+          <ScalarProperty Name="Overage_Balance" ColumnName="Overage_Balance" />
+          <ScalarProperty Name="Mid_cash" ColumnName="Mid_cash" />
+          <ScalarProperty Name="Mid_cash_Usage" ColumnName="Mid_cash_Usage" />
+          <ScalarProperty Name="Mid_Cash_Balance" ColumnName="Mid_Cash_Balance" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ATM_Deposit" ColumnName="ATM_Deposit" />
+          <ScalarProperty Name="ATM_Usage" ColumnName="ATM_Usage" />
+          <ScalarProperty Name="ATM_Balance" ColumnName="ATM_Balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apilog_bkp_28042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.apilog_bkp_28042020">
+        <MappingFragment StoreEntitySet="apilog_bkp_28042020">
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="RequestContentType" ColumnName="RequestContentType" />
+          <ScalarProperty Name="RequestContent" ColumnName="RequestContent" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="RequestMethod" ColumnName="RequestMethod" />
+          <ScalarProperty Name="RequestTimestamp" ColumnName="RequestTimestamp" />
+          <ScalarProperty Name="ResponseContentType" ColumnName="ResponseContentType" />
+          <ScalarProperty Name="ResponseContent" ColumnName="ResponseContent" />
+          <ScalarProperty Name="ResponseStatusCode" ColumnName="ResponseStatusCode" />
+          <ScalarProperty Name="ResponseTimestamp" ColumnName="ResponseTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="atmmaster_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.atmmaster_bkp_06042020">
+        <MappingFragment StoreEntitySet="atmmaster_bkp_06042020">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="atmid" ColumnName="atmid" />
+          <ScalarProperty Name="atmcode" ColumnName="atmcode" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="RoCode" ColumnName="RoCode" />
+          <ScalarProperty Name="RoName" ColumnName="RoName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="HubLocationCode" ColumnName="HubLocationCode" />
+          <ScalarProperty Name="HubLocationName" ColumnName="HubLocationName" />
+          <ScalarProperty Name="SubLocationCode" ColumnName="SubLocationCode" />
+          <ScalarProperty Name="SubLocationName" ColumnName="SubLocationName" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TakeOverDate" ColumnName="TakeOverDate" />
+          <ScalarProperty Name="HandOverDate" ColumnName="HandOverDate" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="AtmType" ColumnName="AtmType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+          <ScalarProperty Name="RouteName" ColumnName="RouteName" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="atmmasterbkps">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.atmmasterbkp">
+        <MappingFragment StoreEntitySet="atmmasterbkp">
+          <ScalarProperty Name="pkid" ColumnName="pkid" />
+          <ScalarProperty Name="atmid" ColumnName="atmid" />
+          <ScalarProperty Name="atmcode" ColumnName="atmcode" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="RoCode" ColumnName="RoCode" />
+          <ScalarProperty Name="RoName" ColumnName="RoName" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="HubLocationCode" ColumnName="HubLocationCode" />
+          <ScalarProperty Name="HubLocationName" ColumnName="HubLocationName" />
+          <ScalarProperty Name="SubLocationCode" ColumnName="SubLocationCode" />
+          <ScalarProperty Name="SubLocationName" ColumnName="SubLocationName" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TakeOverDate" ColumnName="TakeOverDate" />
+          <ScalarProperty Name="HandOverDate" ColumnName="HandOverDate" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="AtmType" ColumnName="AtmType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="RouteCode" ColumnName="RouteCode" />
+          <ScalarProperty Name="RouteName" ColumnName="RouteName" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="batch_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.batch_bkp_06042020">
+        <MappingFragment StoreEntitySet="batch_bkp_06042020">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="EmailContentType" ColumnName="EmailContentType" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="To" ColumnName="To" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+          <ScalarProperty Name="EmailIdentifier" ColumnName="EmailIdentifier" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="DownloadPath" ColumnName="DownloadPath" />
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="PartialResponseSent" ColumnName="PartialResponseSent" />
+          <ScalarProperty Name="FinalResponseSent" ColumnName="FinalResponseSent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorcodemaster_bkp24042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.errorcodemaster_bkp24042020">
+        <MappingFragment StoreEntitySet="errorcodemaster_bkp24042020">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ErrorBucket" ColumnName="ErrorBucket" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Machine_Make" ColumnName="Machine_Make" />
+          <ScalarProperty Name="Module_code" ColumnName="Module_code" />
+          <ScalarProperty Name="Module_Discreption" ColumnName="Module_Discreption" />
+          <ScalarProperty Name="TD_status" ColumnName="TD_status" />
+          <ScalarProperty Name="TD_status_Discreption" ColumnName="TD_status_Discreption" />
+          <ScalarProperty Name="M_status_error" ColumnName="M_status_error" />
+          <ScalarProperty Name="M_status_error_Discreption" ColumnName="M_status_error_Discreption" />
+          <ScalarProperty Name="NextTrans_Flag" ColumnName="NextTrans_Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="errorcodemasterdistinct_bkp24042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.errorcodemasterdistinct_bkp24042020">
+        <MappingFragment StoreEntitySet="errorcodemasterdistinct_bkp24042020">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="errorcode" ColumnName="errorcode" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ErrorBucket" ColumnName="ErrorBucket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticket_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticket_bkp_06042020">
+        <MappingFragment StoreEntitySet="ticket_bkp_06042020">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="QueryCategory" ColumnName="QueryCategory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="HubLocation" ColumnName="HubLocation" />
+          <ScalarProperty Name="DisputedAmount" ColumnName="DisputedAmount" />
+          <ScalarProperty Name="TransactonTime" ColumnName="TransactonTime" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DisputeComments" ColumnName="DisputeComments" />
+          <ScalarProperty Name="UploadFile" ColumnName="UploadFile" />
+          <ScalarProperty Name="EJFilePath" ColumnName="EJFilePath" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorRemark" ColumnName="ErrorRemark" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="DepositAmount" ColumnName="DepositAmount" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="HOComments" ColumnName="HOComments" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="FirstCustodianCode" ColumnName="FirstCustodianCode" />
+          <ScalarProperty Name="FirstCustodianName" ColumnName="FirstCustodianName" />
+          <ScalarProperty Name="SecondCustodianCode" ColumnName="SecondCustodianCode" />
+          <ScalarProperty Name="SecondCustodianName" ColumnName="SecondCustodianName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CustStatus" ColumnName="CustStatus" />
+          <ScalarProperty Name="OldTicketId" ColumnName="OldTicketId" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="RecoveredAmount" ColumnName="RecoveredAmount" />
+          <ScalarProperty Name="TicketAttRefId" ColumnName="TicketAttRefId" />
+          <ScalarProperty Name="IsAtmExist" ColumnName="IsAtmExist" />
+          <ScalarProperty Name="ShortageFromDate" ColumnName="ShortageFromDate" />
+          <ScalarProperty Name="HoOwner" ColumnName="HoOwner" />
+          <ScalarProperty Name="LocOwner" ColumnName="LocOwner" />
+          <ScalarProperty Name="ProcessingRemarks" ColumnName="ProcessingRemarks" />
+          <ScalarProperty Name="ATMpkid" ColumnName="ATMpkid" />
+          <ScalarProperty Name="HOInitialAssignedDT" ColumnName="HOInitialAssignedDT" />
+          <ScalarProperty Name="HOSubmitted" ColumnName="HOSubmitted" />
+          <ScalarProperty Name="AssignedToLocationDT" ColumnName="AssignedToLocationDT" />
+          <ScalarProperty Name="LocSubmitted" ColumnName="LocSubmitted" />
+          <ScalarProperty Name="LocationCompletionDT" ColumnName="LocationCompletionDT" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+          <ScalarProperty Name="LastEOD" ColumnName="LastEOD" />
+          <ScalarProperty Name="FirstEOD" ColumnName="FirstEOD" />
+          <ScalarProperty Name="WOORDERNo" ColumnName="WOORDERNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticket_bkp_08032020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticket_bkp_08032020">
+        <MappingFragment StoreEntitySet="ticket_bkp_08032020">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="QueryCategory" ColumnName="QueryCategory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="HubLocation" ColumnName="HubLocation" />
+          <ScalarProperty Name="DisputedAmount" ColumnName="DisputedAmount" />
+          <ScalarProperty Name="TransactonTime" ColumnName="TransactonTime" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DisputeComments" ColumnName="DisputeComments" />
+          <ScalarProperty Name="UploadFile" ColumnName="UploadFile" />
+          <ScalarProperty Name="EJFilePath" ColumnName="EJFilePath" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorRemark" ColumnName="ErrorRemark" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="DepositAmount" ColumnName="DepositAmount" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="HOComments" ColumnName="HOComments" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="FirstCustodianCode" ColumnName="FirstCustodianCode" />
+          <ScalarProperty Name="FirstCustodianName" ColumnName="FirstCustodianName" />
+          <ScalarProperty Name="SecondCustodianCode" ColumnName="SecondCustodianCode" />
+          <ScalarProperty Name="SecondCustodianName" ColumnName="SecondCustodianName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CustStatus" ColumnName="CustStatus" />
+          <ScalarProperty Name="OldTicketId" ColumnName="OldTicketId" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="RecoveredAmount" ColumnName="RecoveredAmount" />
+          <ScalarProperty Name="TicketAttRefId" ColumnName="TicketAttRefId" />
+          <ScalarProperty Name="IsAtmExist" ColumnName="IsAtmExist" />
+          <ScalarProperty Name="ShortageFromDate" ColumnName="ShortageFromDate" />
+          <ScalarProperty Name="HoOwner" ColumnName="HoOwner" />
+          <ScalarProperty Name="LocOwner" ColumnName="LocOwner" />
+          <ScalarProperty Name="ProcessingRemarks" ColumnName="ProcessingRemarks" />
+          <ScalarProperty Name="ATMpkid" ColumnName="ATMpkid" />
+          <ScalarProperty Name="HOInitialAssignedDT" ColumnName="HOInitialAssignedDT" />
+          <ScalarProperty Name="HOSubmitted" ColumnName="HOSubmitted" />
+          <ScalarProperty Name="AssignedToLocationDT" ColumnName="AssignedToLocationDT" />
+          <ScalarProperty Name="LocSubmitted" ColumnName="LocSubmitted" />
+          <ScalarProperty Name="LocationCompletionDT" ColumnName="LocationCompletionDT" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticket_dup_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticket_dup_bkp_06042020">
+        <MappingFragment StoreEntitySet="ticket_dup_bkp_06042020">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="QueryType" ColumnName="QueryType" />
+          <ScalarProperty Name="QueryCategory" ColumnName="QueryCategory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="EmailDate" ColumnName="EmailDate" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="HubLocation" ColumnName="HubLocation" />
+          <ScalarProperty Name="DisputedAmount" ColumnName="DisputedAmount" />
+          <ScalarProperty Name="TransactonTime" ColumnName="TransactonTime" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DisputeComments" ColumnName="DisputeComments" />
+          <ScalarProperty Name="UploadFile" ColumnName="UploadFile" />
+          <ScalarProperty Name="EJFilePath" ColumnName="EJFilePath" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ErrorRemark" ColumnName="ErrorRemark" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="DepositDate" ColumnName="DepositDate" />
+          <ScalarProperty Name="DepositAmount" ColumnName="DepositAmount" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="HOComments" ColumnName="HOComments" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="FirstCustodianCode" ColumnName="FirstCustodianCode" />
+          <ScalarProperty Name="FirstCustodianName" ColumnName="FirstCustodianName" />
+          <ScalarProperty Name="SecondCustodianCode" ColumnName="SecondCustodianCode" />
+          <ScalarProperty Name="SecondCustodianName" ColumnName="SecondCustodianName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="RuleErrorCode" ColumnName="RuleErrorCode" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CustStatus" ColumnName="CustStatus" />
+          <ScalarProperty Name="OldTicketId" ColumnName="OldTicketId" />
+          <ScalarProperty Name="TargetAmount" ColumnName="TargetAmount" />
+          <ScalarProperty Name="RecoveredAmount" ColumnName="RecoveredAmount" />
+          <ScalarProperty Name="TicketAttRefId" ColumnName="TicketAttRefId" />
+          <ScalarProperty Name="IsAtmExist" ColumnName="IsAtmExist" />
+          <ScalarProperty Name="ShortageFromDate" ColumnName="ShortageFromDate" />
+          <ScalarProperty Name="HoOwner" ColumnName="HoOwner" />
+          <ScalarProperty Name="LocOwner" ColumnName="LocOwner" />
+          <ScalarProperty Name="ProcessingRemarks" ColumnName="ProcessingRemarks" />
+          <ScalarProperty Name="ATMpkid" ColumnName="ATMpkid" />
+          <ScalarProperty Name="HOInitialAssignedDT" ColumnName="HOInitialAssignedDT" />
+          <ScalarProperty Name="HOSubmitted" ColumnName="HOSubmitted" />
+          <ScalarProperty Name="AssignedToLocationDT" ColumnName="AssignedToLocationDT" />
+          <ScalarProperty Name="LocSubmitted" ColumnName="LocSubmitted" />
+          <ScalarProperty Name="LocationCompletionDT" ColumnName="LocationCompletionDT" />
+          <ScalarProperty Name="AlternateCardNo" ColumnName="AlternateCardNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketattachments_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticketattachments_bkp_06042020">
+        <MappingFragment StoreEntitySet="ticketattachments_bkp_06042020">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="VisibleToMSP" ColumnName="VisibleToMSP" />
+          <ScalarProperty Name="VisibleToHO" ColumnName="VisibleToHO" />
+          <ScalarProperty Name="VisibleToLocation" ColumnName="VisibleToLocation" />
+          <ScalarProperty Name="TypeOfAttachment" ColumnName="TypeOfAttachment" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="EmailSentTime" ColumnName="EmailSentTime" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketlog_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.ticketlog_bkp_06042020">
+        <MappingFragment StoreEntitySet="ticketlog_bkp_06042020">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DisputeRejected" ColumnName="DisputeRejected" />
+          <ScalarProperty Name="Justification" ColumnName="Justification" />
+          <ScalarProperty Name="InternalAction" ColumnName="InternalAction" />
+          <ScalarProperty Name="UploadedFileName" ColumnName="UploadedFileName" />
+          <ScalarProperty Name="UploadedFile" ColumnName="UploadedFile" />
+          <ScalarProperty Name="CustCommentsType" ColumnName="CustCommentsType" />
+          <ScalarProperty Name="CustCommentsBy" ColumnName="CustCommentsBy" />
+          <ScalarProperty Name="CustComments" ColumnName="CustComments" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilization_data_bkp_06042020">
+      <EntityTypeMapping TypeName="RMSAutomation_UATModel1.utilization_data_bkp_06042020">
+        <MappingFragment StoreEntitySet="utilization_data_bkp_06042020">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MSP" ColumnName="MSP" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+          <ScalarProperty Name="CBRID" ColumnName="CBRID" />
+          <ScalarProperty Name="ATMID" ColumnName="ATMID" />
+          <ScalarProperty Name="EOD_Date" ColumnName="EOD_Date" />
+          <ScalarProperty Name="Overage" ColumnName="Overage" />
+          <ScalarProperty Name="Overage_Usage" ColumnName="Overage_Usage" />
+          <ScalarProperty Name="Overage_Balance" ColumnName="Overage_Balance" />
+          <ScalarProperty Name="Mid_cash" ColumnName="Mid_cash" />
+          <ScalarProperty Name="Mid_cash_Usage" ColumnName="Mid_cash_Usage" />
+          <ScalarProperty Name="Mid_Cash_Balance" ColumnName="Mid_Cash_Balance" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ATM_Deposit" ColumnName="ATM_Deposit" />
+          <ScalarProperty Name="ATM_Usage" ColumnName="ATM_Usage" />
+          <ScalarProperty Name="ATM_Balance" ColumnName="ATM_Balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
