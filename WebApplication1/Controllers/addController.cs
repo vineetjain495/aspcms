@@ -239,6 +239,15 @@ namespace WebApplication1.Controllers
                 var objEmp = objEntity.employee_role.Where(e => e.Type_EmpCode == employee.Type_EmpCode).FirstOrDefault<employee_role>();
                 if (objEmp != null)
                 {
+                    if(objEmp.IsActive != employee.IsActive || (objEmp.RoleCode != employee.RoleCode && objEmp.RoleCode == 4))
+                    {
+                        var objticket = objEntity.tickets.Where(m => m.AssignedTo == employee.Type_EmpCode).ToList();
+                        if(objticket.Count() != 0)
+                        {
+                            return Ok(0);
+                        }
+                    }
+
                     objEmp.EmployeeName = employee.EmployeeName;
                     objEmp.MobileNumber = employee.MobileNumber;
                     objEmp.EmailId = employee.EmailId;
